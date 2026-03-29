@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentions légales – Dahoni</title>
+  <meta name="description" content="Mentions légales du site Dahoni." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-bg:        #ffffff;
+      --color-primary:   #1a1a2e;
+      --color-accent:    #0070d2;
+      --color-text:      #333333;
+      --color-muted:     #666666;
+      --color-border:    #e0e0e0;
+      --color-section-bg:#f7f9fc;
+      --font-heading:    'Raleway', sans-serif;
+      --font-body:       'Open Sans', sans-serif;
+      --max-width:       860px;
+      --nav-height:      64px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.7;
+    }
+
+    /* ─── Navigation ───────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      background: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 100;
+    }
+
+    nav .logo-text {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav ul a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover { color: #ffffff; }
+
+    nav ul a[target="_blank"]::after {
+      content: ' ↗';
+      font-size: 0.7em;
+      opacity: 0.6;
+    }
+
+    /* ─── Page Content ─────────────────────────────────────────────────── */
+    .page-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: calc(var(--nav-height) + 4rem) 2rem 5rem;
+    }
+
+    .page-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 2.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--color-accent);
+      display: inline-block;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    /* ─── Footer ───────────────────────────────────────────────────────── */
+    footer {
+      background: var(--color-primary);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: #ffffff; }
+
+    /* ─── Responsive ───────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      nav ul { gap: 1rem; }
+      nav ul a { font-size: 0.75rem; }
+    }
+
+    @media (max-width: 480px) {
+      nav { padding: 0 1rem; }
+      nav ul { gap: 0.75rem; }
+      nav ul a[target="_blank"]::after { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav>
+    <a href="/" class="logo-text">Dahoni</a>
+    <ul>
+      <li><a href="/#apropos">À propos</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead</a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Contenu ─────────────────────────────────────────────────────────── -->
+  <main class="page-content">
+    <h1 class="page-title">Mentions légales</h1>
+
+    <p>
+      Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site de Dahoni l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
+    </p>
+
+    <h2>Edition du site</h2>
+    <p>
+      Le présent site, accessible à l'URL www.dahoni.com (le « Site »), est édité par :
+    </p>
+    <p>
+      Dahoni SARL, société au capital de 5 000 euros, inscrite au RCS de NANTERRE sous le numéro RCS NANTERRE 984 697 094, dont le siège social est situé au 16 Allée Condorcet 92140 Clamart, représentée par Antika Abdallah-Grenon dûment habilitée.
+    </p>
+    <p>Le numéro TVA de l'éditeur est : FR41984697094.</p>
+
+    <h2>Hébergement</h2>
+    <p>
+      Le Site est hébergé par la société IONOS, située :<br />
+      7, place de la Gare – BP 70109<br />
+      57201 SARREGUEMINES<br />
+      FRANCE
+    </p>
+
+    <h2>Directeur de publication</h2>
+    <p>La directrice de la publication du Site est Antika Abdallah-Grenon.</p>
+
+    <h2>Nous contacter</h2>
+    <p>
+      Par email : <a href="mailto:contact@dahoni.com">contact@dahoni.com</a><br />
+      Par courrier : 16 Allée Condorcet 92140 Clamart
+    </p>
+
+    <h2>Données personnelles</h2>
+    <p>
+      Le traitement de vos données à caractère personnel est régi par notre Charte du respect de la vie privée, disponible depuis la section
+      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>, conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016 (« RGPD »).
+    </p>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      <a href="/mentions-legales.html">Mentions légales</a>
+      –
+      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    </p>
+    <p>© Copyright 2025 Dahoni. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
