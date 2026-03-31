@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dahoni - Conseil et Architecture CRM Salesforce</title>
-  <meta name="description" content="Consultante et Architecte CRM Salesforce indépendante, 15 ans d'expérience. Sales Cloud, Service Cloud, Financial Services Cloud, Experience Cloud, Marketing Cloud." />
+  <title>Dahoni - Salesforce CRM Consulting & Architecture</title>
+  <meta name="description" content="Independent Salesforce CRM Consultant & Architect, 15 years of experience. Sales Cloud, Service Cloud, Financial Services Cloud, Experience Cloud, Marketing Cloud." />
 
   <!-- Google Fonts: match the clean sans-serif style of the original -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,8 +13,8 @@
 
   <script>
     if (!localStorage.getItem('dahoni_lang')) {
-      if (!(navigator.language || '').toLowerCase().startsWith('fr')) {
-        window.location.replace('/en/');
+      if ((navigator.language || '').toLowerCase().startsWith('fr')) {
+        window.location.replace('/');
       }
     }
   </script>
@@ -28,11 +28,11 @@
   <nav>
     <a href="#" class="logo-text">Dahoni</a>
     <ul>
-      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead</a></li>
       <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="/en/" class="lang-switch" onclick="localStorage.setItem('dahoni_lang','en')">EN</a></li>
+      <li><a href="/" class="lang-switch" onclick="localStorage.setItem('dahoni_lang','fr')">FR</a></li>
     </ul>
   </nav>
 
@@ -40,22 +40,22 @@
   <section id="hero">
     <div>
       <h1>Antika Abdallah-Grenon</h1>
-      <h2>Consultante et Architecte CRM Salesforce</h2>
-      <a href="#contact" class="btn">Prendre contact avec moi</a>
+      <h2>Salesforce CRM Consultant & Architect</h2>
+      <a href="#contact" class="btn">Get in touch</a>
     </div>
   </section>
 
-  <!-- ── À propos ───────────────────────────────────────────────────────── -->
-  <section id="apropos">
+  <!-- ── About ─────────────────────────────────────────────────────────── -->
+  <section id="about">
     <div class="section-inner">
-      <h2 class="section-title">À propos de moi</h2>
+      <h2 class="section-title">About me</h2>
       <p>
-        Je suis consultante et architecte CRM indépendante avec 15 années d'expérience sur Salesforce.
+        I am an independent CRM consultant and architect with 15 years of experience on Salesforce.
       </p>
       <p>
-        Mes compétences incluent l'analyse des besoins métiers, le cadrage, l'architecture fonctionnelle et technique de solutions, le paramétrage, le développement et le déploiement d'applications autour des solutions Sales Cloud, Service Cloud, Financial Services Cloud, Experience Cloud et Marketing Cloud.
+        My expertise covers business requirements analysis, scoping, functional and technical solution architecture, configuration, development, and deployment of applications across Sales Cloud, Service Cloud, Financial Services Cloud, Experience Cloud, and Marketing Cloud.
       </p>
-      <a href="#contact" class="btn">Prendre contact avec moi</a>
+      <a href="#contact" class="btn">Get in touch</a>
     </div>
   </section>
 
@@ -64,18 +64,18 @@
     <div class="section-inner">
       <h2 class="section-title">Certifications</h2>
       <p>
-        Je suis Triple Star Ranger sur Trailhead et possède 15 certifications Salesforce actives, incluant Application Architect, System Architect, Platform Developer I, Experience Cloud Consultant, et Marketing Cloud Email Specialist.
+        I am a Triple Star Ranger on Trailhead and hold 15 active Salesforce certifications, including Application Architect, System Architect, Platform Developer I, Experience Cloud Consultant, and Marketing Cloud Email Specialist.
       </p>
       <a href="http://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener" class="btn">
-        Voir mon profil Trailhead
+        View my Trailhead profile
       </a>
     </div>
   </section>
 
   <!-- ── CTA Banner ─────────────────────────────────────────────────────── -->
   <section id="cta">
-    <h2>Vous avez des questions ?</h2>
-    <a href="#contact" class="btn">Prendre contact</a>
+    <h2>Have a question?</h2>
+    <a href="#contact" class="btn">Get in touch</a>
   </section>
 
   <!-- ── Contact Form ───────────────────────────────────────────────────── -->
@@ -83,16 +83,11 @@
     <div class="section-inner">
       <h2 class="section-title">Contact</h2>
 
-      <!--
-        Formspree endpoint: replace YOUR_FORM_ID with the ID from your
-        Formspree dashboard (https://formspree.io).
-        Example: https://formspree.io/f/abcdefgh
-      -->
       <form id="contact-form" action="https://formspree.io/f/mvzvkqrv" method="POST">
         <div class="form-grid">
 
           <div class="form-group">
-            <label for="name">Nom <span class="required">*</span></label>
+            <label for="name">Name <span class="required">*</span></label>
             <input type="text" id="name" name="name" required autocomplete="name" />
           </div>
 
@@ -108,29 +103,29 @@
 
           <div class="form-consent form-full">
             <input type="checkbox" id="consent" name="consent" required />
-            <span>J'accepte que ces données soient stockées et traitées dans le but d'établir un contact. Je suis conscient(e) que je peux révoquer mon consentement à tout moment. <span class="required">*</span></span>
+            <span>I agree that this data may be stored and processed for the purpose of establishing contact. I understand that I can withdraw my consent at any time. <span class="required">*</span></span>
           </div>
 
           <div class="form-full">
-            <button type="submit" class="btn">Envoyer</button>
+            <button type="submit" class="btn">Send</button>
           </div>
 
         </div>
       </form>
 
-      <div id="form-success">Merci ! Nous vous recontacterons dès que possible.</div>
-      <div id="form-error">Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.</div>
+      <div id="form-success">Thank you! We will get back to you as soon as possible.</div>
+      <div id="form-error">An error occurred while sending your message. Please try again.</div>
     </div>
   </section>
 
   <!-- ── Footer ─────────────────────────────────────────────────────────── -->
   <footer>
     <p>
-      <a href="/mentions-legales.html">Mentions légales</a>
+      <a href="/en/legal-notice.html">Legal notice</a>
       –
-      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+      <a href="/en/privacy-policy.html">Privacy policy</a>
     </p>
-    <p>© Copyright 2025 Dahoni. Tous droits réservés.</p>
+    <p>© Copyright 2025 Dahoni. All rights reserved.</p>
   </footer>
 
   <!-- ── Form JS: AJAX submit + feedback messages ───────────────────────── -->
