@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Consultante Salesforce Freelance | Dahoni</title>
+  <meta name="description" content="Découvrez les services proposés par Dahoni : architecture Salesforce, audit & sécurité, DevOps & migration, intégrations et intelligence artificielle." />
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="pages.css" />
+</head>
+
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav>
+    <a href="/" class="logo-text">Dahoni</a>
+    <ul>
+      <li><a href="/#apropos">À propos</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead</a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="/en/services.html" class="lang-switch" onclick="localStorage.setItem('dahoni_lang','en')">EN</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ── Contenu ─────────────────────────────────────────────────────────── -->
+  <main class="page-content">
+    <h1 class="page-title">Services</h1>
+    <p class="services-intro">
+      Consultante et architecte Salesforce indépendante avec 15 ans d'expérience, j'interviens sur l'ensemble du cycle de vie de vos projets CRM — du cadrage à la mise en production.
+    </p>
+
+    <div class="services-grid">
+
+      <!-- Architecture & Design -->
+      <div class="service-card">
+        <div class="service-icon">⬡</div>
+        <h2 class="service-title">Architecture &amp; Design</h2>
+        <p class="service-desc">Conception d'architectures Salesforce robustes et évolutives, alignées sur vos enjeux métiers et vos contraintes techniques.</p>
+        <ul>
+          <li>Cadrage fonctionnel et technique</li>
+          <li>Choix de solutions et d'éditions</li>
+          <li>Conception du modèle de données</li>
+          <li>Architecture multi-cloud (Sales, Service, FSC, Experience)</li>
+          <li>Revue d'architecture existante</li>
+        </ul>
+      </div>
+
+      <!-- Audit & Sécurité -->
+      <div class="service-card">
+        <div class="service-icon">⛨</div>
+        <h2 class="service-title">Audit &amp; Sécurité</h2>
+        <p class="service-desc">Analyse approfondie de vos orgs pour identifier les risques, garantir la conformité et renforcer votre posture de sécurité.</p>
+        <ul>
+          <li>Revue complète d'organisation Salesforce</li>
+          <li>Conformité RGPD et réglementaire</li>
+          <li>Guest user profiles et accès anonymes</li>
+          <li>Organisation-Wide Defaults (OWD) et partage</li>
+          <li>Audit des profils, rôles et permissions</li>
+        </ul>
+      </div>
+
+      <!-- DevOps & Migration -->
+      <div class="service-card">
+        <div class="service-icon">⟳</div>
+        <h2 class="service-title">DevOps &amp; Migration</h2>
+        <p class="service-desc">Mise en place de pratiques DevOps modernes et pilotage de migrations complexes avec un risque maîtrisé.</p>
+        <ul>
+          <li>Stratégie et pipeline CI/CD (Salesforce DX)</li>
+          <li>Gestion des environnements et sandboxes</li>
+          <li>Planification et exécution du cutover</li>
+          <li>Migration de données et ETL</li>
+          <li>Gouvernance des releases</li>
+        </ul>
+      </div>
+
+      <!-- Intégrations & AI -->
+      <div class="service-card">
+        <div class="service-icon">◈</div>
+        <h2 class="service-title">Intégrations &amp; AI</h2>
+        <p class="service-desc">Connexion de Salesforce à votre écosystème applicatif et activation des capacités d'intelligence artificielle pour automatiser et augmenter vos équipes.</p>
+        <ul>
+          <li>Intégrations API REST / SOAP / événementielles</li>
+          <li>Middleware et plateformes d'intégration</li>
+          <li>Einstein AI et prédictions métiers</li>
+          <li>Agentforce — agents IA autonomes</li>
+          <li>Automatisation intelligente des processus</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="services-cta">
+      <p>Vous avez un projet ou souhaitez en savoir plus sur mon approche ?</p>
+      <a href="/#contact" class="btn">Prendre contact</a>
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      <a href="/mentions-legales.html">Mentions légales</a>
+      –
+      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    </p>
+    <p>© Copyright 2025 Dahoni. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('nav');
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('ul a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
