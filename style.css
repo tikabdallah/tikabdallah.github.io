@@ -38,12 +38,6 @@ nav {
   z-index: 100;
 }
 
-nav .logo img {
-  height: 36px;
-  display: block;
-}
-
-/* Fallback text logo if image is unavailable */
 nav .logo-text {
   font-family: var(--font-heading);
   font-size: 1.4rem;
@@ -172,8 +166,7 @@ section:nth-of-type(even) {
 }
 
 /* ─── About ─────────────────────────────────────────────────────────── */
-#apropos p,
-#about p {
+#apropos p {
   font-size: 1.05rem;
   color: var(--color-text);
   margin-bottom: 1.5rem;
@@ -233,39 +226,6 @@ section:nth-of-type(even) {
   text-align: center;
 }
 
-.cert-others-title {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-muted);
-  margin-bottom: 0.75rem;
-}
-
-.cert-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1.5rem;
-  margin-bottom: 2rem;
-  max-width: 680px;
-}
-
-.cert-list li {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-  padding-left: 1rem;
-  position: relative;
-}
-
-.cert-list li::before {
-  content: '·';
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
-  font-weight: 700;
-}
 
 @media (max-width: 640px) {
   .cert-featured {
