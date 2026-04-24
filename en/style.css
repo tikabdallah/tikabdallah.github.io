@@ -180,8 +180,90 @@ section:nth-of-type(even) {
 /* ─── Certifications ────────────────────────────────────────────────── */
 #certifications p {
   font-size: 1.05rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
   max-width: 680px;
+}
+
+.cert-featured {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cert-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cert-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
+
+.cert-badge img {
+  width: 98px;
+  height: 98px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.12));
+}
+
+.cert-badge span {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.cert-others-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cert-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 680px;
+}
+
+.cert-list li {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.cert-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .cert-featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ─── CTA Banner ─────────────────────────────────────────────────────── */
