@@ -66,14 +66,23 @@
 
     .dg-hero h1 {
       font-family: var(--font-heading);
-      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 1rem;
-      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
     }
 
-    .dg-hero h1 span {
+    .dg-hero-tagline {
+      font-family: var(--font-heading);
+      font-size: clamp(1.2rem, 3vw, 1.9rem);
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0 0 1.5rem;
+      line-height: 1.3;
+    }
+
+    .dg-hero-tagline span {
       color: #2ec4d6;
     }
 
@@ -311,7 +320,8 @@
     <div class="dg-hero-inner">
       <div class="dg-hero-content">
         <div class="dg-hero-badge">Application Salesforce native · Bientôt sur l'AppExchange</div>
-        <h1>Générez vos données de test et de démo<br /><span>en quelques secondes</span></h1>
+        <h1>Data Generator</h1>
+        <p class="dg-hero-tagline">Générez vos données de test et de démo <span>en quelques secondes</span></p>
         <p class="dg-hero-sub">
           Data Generator est une application native Salesforce gratuite qui vous permet de créer des enregistrements réalistes sur n'importe quel objet standard ou personnalisé, que ce soit pour tester vos développements ou faire une démo client. Sans code, sans CSV, sans friction.
         </p>
