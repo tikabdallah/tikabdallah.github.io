@@ -183,8 +183,9 @@ a:hover { text-decoration: underline; }
 }
 
 .service-card {
-  border: 1px solid var(--color-border);
-  border-top: 4px solid var(--color-accent);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
   padding: 2rem;
   background: var(--color-bg);
 }
@@ -246,6 +247,7 @@ a:hover { text-decoration: underline; }
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  border-radius: 2rem;
   cursor: pointer;
   transition: background 0.2s, transform 0.15s;
 }

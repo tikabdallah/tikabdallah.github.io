@@ -105,6 +105,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       text-decoration: none;
+      border-radius: 2rem;
       transition: border-color 0.2s, color 0.2s;
     }
 
@@ -149,8 +150,9 @@
 
     .dg-card {
       background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-top: 4px solid var(--color-accent);
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
       padding: 1.75rem;
     }
 
@@ -158,6 +160,7 @@
       font-size: 1.6rem;
       margin-bottom: 1rem;
       line-height: 1;
+      color: var(--color-accent);
     }
 
     .dg-card h3 {
@@ -318,6 +321,7 @@
         </p>
         <div class="dg-hero-actions">
           <a href="#features" class="btn-outline">Explore features</a>
+          <a href="#screenshots" class="btn-outline">See the app in action</a>
         </div>
       </div>
       <div class="dg-hero-image">
@@ -375,7 +379,7 @@
   </section>
 
   <!-- ── Screenshots ──────────────────────────────────────────────────────── -->
-  <section class="dg-screenshots">
+  <section class="dg-screenshots" id="screenshots">
     <div class="dg-screenshots-inner">
       <h2 class="dg-section-title" style="margin-bottom: 0.5rem;">See the app in action</h2>
       <p class="dg-section-sub">100% native Salesforce Lightning interface.</p>

@@ -136,6 +136,7 @@ nav ul a[target="_blank"]::after {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  border-radius: 2rem;
   cursor: pointer;
   transition: background 0.2s, transform 0.15s;
 }
