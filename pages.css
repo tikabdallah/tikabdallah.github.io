@@ -167,19 +167,82 @@ a {
 }
 
 
-/* ─── Services Page ────────────────────────────────────────────────── */
-.services-intro {
+/* ─── Services Hero ──────────────────────────────────────────────────── */
+.services-hero {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #e2e2e2 url('images/background.jpg') top right / cover no-repeat;
+  padding: calc(var(--nav-height) + 4rem) 2rem 4rem;
+}
+
+.services-hero-inner {
+  max-width: 700px;
+}
+
+.services-hero-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.services-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  border-bottom: none;
+  display: block;
+}
+
+.services-hero-sub {
   font-size: 1.05rem;
   color: var(--color-muted);
-  max-width: 680px;
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Services Section ───────────────────────────────────────────────── */
+.services-section {
+  padding: 5rem 2rem;
+  background: var(--color-bg);
+}
+
+.services-section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--color-accent);
+  display: inline-block;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.75rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 .service-card {
@@ -188,6 +251,12 @@ a {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
   padding: 2rem;
   background: var(--color-bg);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .service-icon {
@@ -222,17 +291,83 @@ a {
   margin-bottom: 0.4rem;
 }
 
-.services-cta {
-  text-align: center;
-  padding: 3rem 2rem;
+/* ─── Process Section ────────────────────────────────────────────────── */
+.process-section {
+  padding: 5rem 2rem;
   background: var(--color-section-bg);
 }
 
-.services-cta p {
+.process-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
   font-family: var(--font-heading);
   font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.process-step h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.process-step p {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ─── CTA Section ────────────────────────────────────────────────────── */
+.services-cta {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: var(--color-primary);
+}
+
+.services-cta h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.services-cta p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
 .btn {
@@ -259,8 +394,27 @@ a {
   transform: translateY(-1px);
 }
 
+.btn-light {
+  background: #ffffff;
+  color: var(--color-primary);
+}
+
+.btn-light:hover {
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .process-steps {
     grid-template-columns: 1fr;
   }
 }
