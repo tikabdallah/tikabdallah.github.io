@@ -35,6 +35,7 @@
   </script>
 
   <link rel="stylesheet" href="../style.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -187,7 +188,7 @@
             <input type="checkbox" id="consent" name="consent" required />
             <span>I agree that this data may be stored and processed for the purpose of establishing contact. I understand that I can withdraw my consent at any time. <span class="required">*</span></span>
           </div>
-          div class="g-recaptcha" data-sitekey="6LcqazotAAAAAEHafitceG-l5CNwI5F-sAJjpk50"></div>
+          <div class="g-recaptcha form-full" data-sitekey="6LcqazotAAAAAEHafitceG-l5CNwI5F-sAJjpk50"></div>
           <div class="form-full">
             <button type="submit" class="btn">Send</button>
           </div>
@@ -245,6 +246,12 @@
       successMsg.style.display = 'none';
       errorMsg.style.display = 'none';
 
+      if (!grecaptcha.getResponse()) {
+        errorMsg.textContent = 'Please confirm you are not a robot.';
+        errorMsg.style.display = 'block';
+        return;
+      }
+
       const data = new FormData(form);
 
       try {
@@ -256,11 +263,14 @@
 
         if (res.ok) {
           form.reset();
+          grecaptcha.reset();
           successMsg.style.display = 'block';
         } else {
+          errorMsg.textContent = 'An error occurred while sending your message. Please try again.';
           errorMsg.style.display = 'block';
         }
       } catch {
+        errorMsg.textContent = 'An error occurred while sending your message. Please try again.';
         errorMsg.style.display = 'block';
       }
     });
