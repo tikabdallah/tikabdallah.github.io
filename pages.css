@@ -277,7 +277,7 @@ a {
 }
 
 .services-section-inner {
-  max-width: var(--max-width);
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
@@ -296,7 +296,7 @@ a {
 
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
   margin-bottom: 0;
   text-align: left;
@@ -346,6 +346,19 @@ a {
   font-size: 0.9rem;
   color: var(--color-text);
   margin-bottom: 0.4rem;
+}
+
+.service-example {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--color-text-light, #6b7280);
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.service-example a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .card-cta {
@@ -475,6 +488,12 @@ a {
 .btn-light:hover {
   background: rgba(255, 255, 255, 0.88);
   color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {

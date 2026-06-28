@@ -217,10 +217,11 @@
             <label for="subject">Objet <span class="required">*</span></label>
             <select id="subject" name="subject" required>
               <option value="" disabled selected>-- Choisissez un objet --</option>
-              <option value="Audit de mon organisation Salesforce">Audit de mon organisation Salesforce</option>
               <option value="Cadrage de projet">Cadrage de projet</option>
-              <option value="DevOps &amp; Migration">DevOps &amp; Migration</option>
               <option value="Intégrations &amp; IA">Intégrations &amp; IA</option>
+              <option value="Développement d'applications &amp; AppExchange">Développement d'applications &amp; AppExchange</option>
+              <option value="Audit de mon organisation Salesforce">Audit de mon organisation Salesforce</option>
+              <option value="DevOps &amp; Migration">DevOps &amp; Migration</option>
               <option value="Autre">Autre</option>
             </select>
           </div>
@@ -303,9 +304,11 @@
     (function () {
       var params = new URLSearchParams(window.location.search);
       var subjectMap = {
-        'audit':        'Audit de mon organisation Salesforce',
-        'architecture': 'Cadrage de projet',
-        'migration':    'DevOps & Migration'
+        'architecture':  'Cadrage de projet',
+        'integrations':  'Intégrations & IA',
+        'appexchange':   "Développement d'applications & AppExchange",
+        'audit':         'Audit de mon organisation Salesforce',
+        'migration':     'DevOps & Migration'
       };
       var sel = document.getElementById('subject');
       var hidden = document.getElementById('email-subject');
