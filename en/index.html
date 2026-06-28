@@ -35,7 +35,7 @@
   </script>
 
   <link rel="stylesheet" href="../style.css" />
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfjdTotAAAAANSlF-InRzsS3klxY07Ryd6Qucmk" async defer></script>
 </head>
 
 <body>
@@ -188,7 +188,6 @@
             <input type="checkbox" id="consent" name="consent" required />
             <span>I agree that this data may be stored and processed for the purpose of establishing contact. I understand that I can withdraw my consent at any time. <span class="required">*</span></span>
           </div>
-          <div class="g-recaptcha form-full" data-sitekey="6LfjdTotAAAAANSlF-InRzsS3klxY07Ryd6Qucmk"></div>
           <div class="form-full">
             <button type="submit" class="btn">Send</button>
           </div>
@@ -241,20 +240,23 @@
     const successMsg = document.getElementById('form-success');
     const errorMsg = document.getElementById('form-error');
 
+    const SITE_KEY = '6LfjdTotAAAAANSlF-InRzsS3klxY07Ryd6Qucmk';
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       successMsg.style.display = 'none';
       errorMsg.style.display = 'none';
 
-      if (!grecaptcha.getResponse()) {
-        errorMsg.textContent = 'Please confirm you are not a robot.';
-        errorMsg.style.display = 'block';
-        return;
-      }
-
-      const data = new FormData(form);
-
       try {
+        const token = await new Promise((resolve, reject) => {
+          grecaptcha.ready(() => {
+            grecaptcha.execute(SITE_KEY, { action: 'contact' }).then(resolve).catch(reject);
+          });
+        });
+
+        const data = new FormData(form);
+        data.set('g-recaptcha-response', token);
+
         const res = await fetch(form.action, {
           method: 'POST',
           body: data,
@@ -263,7 +265,6 @@
 
         if (res.ok) {
           form.reset();
-          grecaptcha.reset();
           successMsg.style.display = 'block';
         } else {
           errorMsg.textContent = 'An error occurred while sending your message. Please try again.';
