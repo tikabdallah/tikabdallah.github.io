@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Generator · Salesforce App | Dahoni</title>
+  <meta name="description" content="Data Generator is a native Salesforce app. Generate realistic test and demo data in seconds on any standard or custom object." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dahoni.com/en/datagenerator" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:site_name" content="Dahoni" />
+  <meta property="og:title" content="Data Generator · Salesforce App | Dahoni" />
+  <meta property="og:description" content="Generate realistic test and demo data in seconds on any standard or custom Salesforce object." />
+  <meta property="og:image" content="https://dahoni.com/images/social-preview.jpeg" />
+
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+
+  <link rel="canonical" href="https://dahoni.com/en/datagenerator" />
+  <link rel="alternate" hreflang="fr" href="https://dahoni.com/datagenerator" />
+  <link rel="alternate" hreflang="en" href="https://dahoni.com/en/datagenerator" />
+  <link rel="alternate" hreflang="x-default" href="https://dahoni.com/datagenerator" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../pages.css" />
+
+  <style>
+    /* ── Hero ── */
+    .dg-hero {
+      background: var(--color-primary);
+      padding: calc(var(--nav-height) + 3rem) 2rem 3rem;
+    }
+
+    .dg-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .dg-hero-content {
+      text-align: left;
+    }
+
+    .dg-hero-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+    }
+
+    .dg-hero-badge {
+      display: inline-block;
+      background: rgba(0, 112, 210, 0.25);
+      color: #5ba4f5;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .dg-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .dg-hero h1 span {
+      color: #2ec4d6;
+    }
+
+    .dg-hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 480px;
+      margin: 0 0 2.5rem;
+    }
+
+    .dg-hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.85);
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: #ffffff;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* ── Features ── */
+    .dg-features {
+      background: var(--color-section-bg);
+      padding: 5rem 2rem;
+    }
+
+    .dg-features-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .dg-section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700;
+      color: var(--color-primary);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .dg-section-sub {
+      text-align: center;
+      color: var(--color-muted);
+      font-size: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .dg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .dg-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-top: 4px solid var(--color-accent);
+      padding: 1.75rem;
+    }
+
+    .dg-card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .dg-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin: 0 0 0.6rem;
+    }
+
+    .dg-card p {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── Screenshots ── */
+    .dg-screenshots {
+      background: #ffffff;
+      padding: 5rem 2rem;
+    }
+
+    .dg-screenshots-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .dg-screenshot-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .dg-screenshot-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .dg-screenshot-row.reverse {
+      direction: rtl;
+    }
+
+    .dg-screenshot-row.reverse > * {
+      direction: ltr;
+    }
+
+    .dg-screenshot-img {
+      width: 100%;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .dg-screenshot-text h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin: 0 0 0.75rem;
+    }
+
+    .dg-screenshot-text p {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* ── CTA ── */
+    .dg-cta {
+      background: var(--color-primary);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .dg-cta h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 1rem;
+    }
+
+    .dg-cta p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem;
+      margin: 0 0 2.5rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .dg-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .dg-hero-content {
+        text-align: center;
+      }
+
+      .dg-hero-sub {
+        max-width: 100%;
+        margin: 0 auto 2.5rem;
+      }
+
+      .dg-hero-actions {
+        justify-content: center;
+      }
+
+      .dg-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .dg-screenshot-row,
+      .dg-screenshot-row.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .dg-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav>
+    <a href="/en/" class="logo-link"><img src="../../images/logo.png" alt="Dahoni" class="logo-img" /></a>
+    <ul>
+      <li><a href="/en/#about">About</a></li>
+      <li><a href="/en/services.html">Services</a></li>
+      <li><a href="/en/datagenerator/" class="active">Apps</a></li>
+
+      <li><a href="/en/#contact">Contact</a></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead</a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="/datagenerator/" class="lang-switch" onclick="localStorage.setItem('dahoni_lang','fr')">FR</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────────────────────── -->
+  <section class="dg-hero">
+    <div class="dg-hero-inner">
+      <div class="dg-hero-content">
+        <div class="dg-hero-badge">Native Salesforce App · Coming soon on AppExchange</div>
+        <h1>Generate your test and demo data<br /><span>in seconds</span></h1>
+        <p class="dg-hero-sub">
+          Data Generator is a free native Salesforce app that lets you create realistic records on any standard or custom object — whether you're testing your developments or impressing during a client demo. No code, no CSV, no friction.
+        </p>
+        <div class="dg-hero-actions">
+          <a href="#features" class="btn-outline">Explore features</a>
+        </div>
+      </div>
+      <div class="dg-hero-image">
+        <img src="../../images/datagenerator/hero.png" alt="Data Generator — Salesforce app interface" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ─────────────────────────────────────────────────────────── -->
+  <section class="dg-features" id="features">
+    <div class="dg-features-inner">
+      <h2 class="dg-section-title">Everything you need for testing and demos</h2>
+      <p class="dg-section-sub">Built for Salesforce developers, admins, and QA teams.</p>
+
+      <div class="dg-grid">
+
+        <div class="dg-card">
+          <div class="dg-card-icon">⬡</div>
+          <h3>Any Salesforce object</h3>
+          <p>Generate records on all standard and custom objects in your org: Account, Contact, Opportunity, and many more.</p>
+        </div>
+
+        <div class="dg-card">
+          <div class="dg-card-icon">◈</div>
+          <h3>Multi-object in one run</h3>
+          <p>Create multiple objects in a single execution and automatically link them via lookup fields — no manual post-processing needed.</p>
+        </div>
+
+        <div class="dg-card">
+          <div class="dg-card-icon">≡</div>
+          <h3>Field-by-field control</h3>
+          <p>Configure each field individually: text type, phone format, date range, picklist distribution, blank value rate.</p>
+        </div>
+
+        <div class="dg-card">
+          <div class="dg-card-icon">⊞</div>
+          <h3>Reusable templates</h3>
+          <p>Save your configurations as templates and relaunch them in one click, or start from a ready-to-use template to get up and running fast.</p>
+        </div>
+
+        <div class="dg-card">
+          <div class="dg-card-icon">↺</div>
+          <h3>One-click delete</h3>
+          <p>Made a mistake? Delete all records generated by a run and relaunch a new configuration immediately.</p>
+        </div>
+
+        <div class="dg-card">
+          <div class="dg-card-icon">⟳</div>
+          <h3>Post-sandbox automation</h3>
+          <p>Configure templates that run automatically on every sandbox refresh via the native SandboxPostCopyHandler.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Screenshots ──────────────────────────────────────────────────────── -->
+  <section class="dg-screenshots">
+    <div class="dg-screenshots-inner">
+      <h2 class="dg-section-title" style="margin-bottom: 0.5rem;">See the app in action</h2>
+      <p class="dg-section-sub">100% native Salesforce Lightning interface.</p>
+
+      <div class="dg-screenshot-row">
+        <img src="../../images/datagenerator/slide_01.png" alt="Start from a template or from scratch" class="dg-screenshot-img" />
+        <div class="dg-screenshot-text">
+          <h3>Template or free setup</h3>
+          <p>Start a new generation from a pre-configured template or build your own setup from scratch. Standard templates (Sales Cloud, etc.) are included on install.</p>
+        </div>
+      </div>
+
+      <div class="dg-screenshot-row reverse">
+        <img src="../../images/datagenerator/slide_04.png" alt="Generate multiple linked objects in one run" class="dg-screenshot-img" />
+        <div class="dg-screenshot-text">
+          <h3>Object relationships</h3>
+          <p>Add as many objects as needed in a single run. Lookup fields automatically link the created records — for example, associating Contacts with Accounts generated in the same run.</p>
+        </div>
+      </div>
+
+      <div class="dg-screenshot-row">
+        <img src="../../images/datagenerator/slide_06.png" alt="Generation history" class="dg-screenshot-img" />
+        <div class="dg-screenshot-text">
+          <h3>Instant generation &amp; full history</h3>
+          <p>Records are created in seconds. Every run is logged in the History tab with record count, date, and any errors.</p>
+        </div>
+      </div>
+
+      <div class="dg-screenshot-row reverse">
+        <img src="../../images/datagenerator/slide_08.png" alt="Settings and sandbox automation" class="dg-screenshot-img" />
+        <div class="dg-screenshot-text">
+          <h3>Automation on sandbox refresh</h3>
+          <p>Configure your templates to run automatically on every sandbox refresh. Ideal for keeping your test environments ready to use as soon as they're created.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ──────────────────────────────────────────────────────────────── -->
+  <section class="dg-cta">
+    <h2>Ready to save time on your tests and demos?</h2>
+    <p>Data Generator will soon be available for free on AppExchange.</p>
+    <a href="/en/#contact" class="btn">Get in touch to learn more</a>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      <a href="/en/legal-notice.html">Legal notice</a>
+      ·
+      <a href="/en/privacy-policy.html">Privacy policy</a>
+    </p>
+    <p>© Copyright 2026 Dahoni. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('nav');
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('ul a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
