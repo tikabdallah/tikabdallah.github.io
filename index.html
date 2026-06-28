@@ -35,6 +35,54 @@
   </script>
 
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://dahoni.com/#antika",
+        "name": "Antika Abdallah-Grenon",
+        "jobTitle": "Architecte et Consultante Salesforce Freelance",
+        "url": "https://dahoni.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/aabdallahgrenon/",
+          "https://salesforce.com/trailblazer/antikaag"
+        ],
+        "knowsAbout": [
+          "Salesforce", "Financial Services Cloud", "Sales Cloud", "Service Cloud",
+          "Experience Cloud", "Marketing Cloud", "Architecture CRM", "Agentforce"
+        ],
+        "worksFor": { "@id": "https://dahoni.com/#organization" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://dahoni.com/#organization",
+        "name": "Dahoni",
+        "url": "https://dahoni.com/",
+        "description": "Conseil et architecture CRM Salesforce freelance. Spécialiste Financial Services Cloud, Sales Cloud, Service Cloud, Experience Cloud.",
+        "founder": { "@id": "https://dahoni.com/#antika" },
+        "areaServed": "FR",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services Salesforce",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Architecture & Design Salesforce" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit & Sécurité Salesforce" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DevOps & Migration Salesforce" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intégrations & AI Salesforce" } }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>

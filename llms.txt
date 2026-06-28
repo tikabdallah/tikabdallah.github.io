@@ -1,0 +1,33 @@
+# Dahoni
+
+> Antika Abdallah-Grenon — Architecte et Consultante Salesforce freelance certifiée, basée à Paris, France. Plus de 15 ans d'expérience Salesforce, 15 certifications actives, Triple Star Ranger Trailhead.
+
+Dahoni propose des missions de conseil et d'architecture CRM Salesforce pour des entreprises des secteurs banque, assurance et services. Spécialiste Financial Services Cloud (FSC), Sales Cloud, Service Cloud, Experience Cloud et Marketing Cloud.
+
+## Services
+
+- **Architecture & Design** : cadrage fonctionnel et technique, modèle de données, architecture multi-cloud (Sales, Service, FSC, Experience), revue d'architecture existante
+- **Audit & Sécurité** : revue complète d'organisation Salesforce, conformité RGPD, sécurisation des portails Experience Cloud, audit des profils, rôles et permissions
+- **DevOps & Migration** : pipelines CI/CD Salesforce DX, gestion des environnements et sandboxes, migration de données, gouvernance des releases
+- **Intégrations & AI** : API REST / SOAP / événementielles, Einstein AI, Agentforce (agents IA autonomes), automatisation intelligente des processus
+
+## Applications
+
+- [Data Generator](https://dahoni.com/datagenerator/) : application Salesforce native gratuite pour générer des données de test réalistes sur n'importe quel objet standard ou personnalisé, sans code ni CSV. Bientôt disponible sur l'AppExchange.
+
+## Pages
+
+- [Accueil](https://dahoni.com/)
+- [Services](https://dahoni.com/services.html)
+- [Data Generator](https://dahoni.com/datagenerator/)
+- [Mentions légales](https://dahoni.com/mentions-legales.html)
+- [Politique de confidentialité](https://dahoni.com/politique-de-confidentialite.html)
+
+## Profils professionnels
+
+- [Trailhead Salesforce](https://salesforce.com/trailblazer/antikaag)
+- [LinkedIn](https://www.linkedin.com/in/aabdallahgrenon/)
+
+## Engagement pro bono
+
+Une partie de l'activité est dédiée à accompagner gratuitement des associations et organisations à impact dans leur adoption de Salesforce, dans l'esprit du modèle 1-1-1 de Salesforce.
