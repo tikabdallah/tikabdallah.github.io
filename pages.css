@@ -80,6 +80,7 @@ nav ul a:not(.lang-switch):hover,
 nav ul a:not(.lang-switch).active {
   color: var(--color-accent);
   border-bottom-color: var(--color-accent);
+  text-decoration: none;
 }
 
 .lang-switch {
@@ -165,7 +166,6 @@ a {
   text-decoration: none;
 }
 
-a:hover { text-decoration: underline; }
 
 /* ─── Services Page ────────────────────────────────────────────────── */
 .services-intro {

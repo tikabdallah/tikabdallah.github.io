@@ -73,6 +73,7 @@ nav ul a:not(.lang-switch):hover,
 nav ul a:not(.lang-switch).active {
   color: var(--color-accent);
   border-bottom-color: var(--color-accent);
+  text-decoration: none;
 }
 
 /* External links with subtle indicator */
