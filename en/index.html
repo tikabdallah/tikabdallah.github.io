@@ -153,6 +153,7 @@
       <h2 class="section-title">Contact</h2>
 
       <form id="contact-form" action="https://formspree.io/f/mvzvkqrv" method="POST">
+        <input type="hidden" name="_subject" id="email-subject" value="New message – Dahoni" />
         <div class="form-grid">
 
           <div class="form-group">
@@ -166,6 +167,18 @@
           </div>
 
           <div class="form-group form-full">
+            <label for="subject">Subject <span class="required">*</span></label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>-- Select a subject --</option>
+              <option value="Salesforce org audit">Salesforce org audit</option>
+              <option value="Project scoping">Project scoping</option>
+              <option value="DevOps &amp; Migration">DevOps &amp; Migration</option>
+              <option value="Integrations &amp; AI">Integrations &amp; AI</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group form-full">
             <label for="message">Message <span class="required">*</span></label>
             <textarea id="message" name="message" required></textarea>
           </div>
@@ -174,7 +187,7 @@
             <input type="checkbox" id="consent" name="consent" required />
             <span>I agree that this data may be stored and processed for the purpose of establishing contact. I understand that I can withdraw my consent at any time. <span class="required">*</span></span>
           </div>
-
+          div class="g-recaptcha" data-sitekey="6LcqazotAAAAAEHafitceG-l5CNwI5F-sAJjpk50"></div>
           <div class="form-full">
             <button type="submit" class="btn">Send</button>
           </div>
@@ -196,6 +209,30 @@
     </p>
     <p>© Copyright 2026 Dahoni. All rights reserved.</p>
   </footer>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var subjectMap = {
+        'audit':        'Salesforce org audit',
+        'architecture': 'Project scoping',
+        'migration':    'DevOps & Migration'
+      };
+      var sel = document.getElementById('subject');
+      var hidden = document.getElementById('email-subject');
+
+      function syncSubject() {
+        hidden.value = sel.value
+          ? 'Dahoni: ' + sel.value
+          : 'New message – Dahoni';
+      }
+
+      var param = params.get('subject');
+      if (param && subjectMap[param]) sel.value = subjectMap[param];
+      syncSubject();
+      sel.addEventListener('change', syncSubject);
+    })();
+  </script>
 
   <!-- ── Form JS: AJAX submit + feedback messages ───────────────────────── -->
   <script>

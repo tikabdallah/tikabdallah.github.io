@@ -306,7 +306,7 @@ label {
 
 label .required { color: var(--color-accent); margin-left: 2px; }
 
-input, textarea {
+input, select, textarea {
   font-family: var(--font-body);
   font-size: 1rem;
   padding: 0.65rem 0.9rem;
@@ -318,9 +318,11 @@ input, textarea {
   width: 100%;
 }
 
-input:focus, textarea:focus {
+input:focus, select:focus, textarea:focus {
   border-color: var(--color-accent);
 }
+
+select { cursor: pointer; }
 
 textarea { resize: vertical; min-height: 130px; }
 
