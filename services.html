@@ -24,7 +24,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="pages.css" />
 </head>
@@ -37,11 +37,17 @@
     <ul>
       <li><a href="/#apropos">À propos</a></li>
       <li><a href="/services.html" class="active">Services</a></li>
-      <li><a href="/datagenerator/">Applications</a></li>
+      <li><a href="/index.html#applications">Applications</a></li>
       <li><a href="/#contact">Contact</a></li>
-      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead</a></li>
-      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="/en/services.html" class="lang-switch" onclick="localStorage.setItem('dahoni_lang','en')">EN</a></li>
+      <li class="nav-divider"></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+      <li class="lang-toggle-item">
+        <div class="lang-toggle">
+          <span class="lang-toggle-active">FR</span>
+          <a href="/en/services.html" class="lang-toggle-link" onclick="localStorage.setItem('dahoni_lang','en')">EN</a>
+        </div>
+      </li>
     </ul>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span>
@@ -53,6 +59,7 @@
   <!-- ── Hero ──────────────────────────────────────────────────────────── -->
   <section class="services-hero">
     <div class="services-hero-inner">
+      <div class="section-label">00 / Services</div>
       <p class="services-hero-eyebrow">Consultante &amp; Architecte Salesforce · + de 15 ans d'expérience</p>
       <h1>L'expertise Salesforce<br>dont votre projet a besoin</h1>
       <p class="services-hero-sub">Du cadrage fonctionnel à la mise en production, j'accompagne vos projets CRM avec rigueur et en toute autonomie.</p>
@@ -78,6 +85,7 @@
   <!-- ── Expertises ─────────────────────────────────────────────────────── -->
   <section class="services-section">
     <div class="services-section-inner">
+      <div class="section-label">01 / Expertises</div>
       <h2 class="section-heading">Mes expertises</h2>
       <div class="services-grid">
 
@@ -164,6 +172,7 @@
   <!-- ── Comment ça se passe ──────────────────────────────────────────── -->
   <section class="process-section">
     <div class="process-inner">
+      <div class="section-label">02 / Méthode</div>
       <h2 class="section-heading">Comment ça se passe</h2>
       <div class="process-steps">
 

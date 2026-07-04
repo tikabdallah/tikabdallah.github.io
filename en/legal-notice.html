@@ -23,7 +23,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../pages.css" />
 </head>
@@ -36,12 +36,18 @@
     <ul>
       <li><a href="/en/#about">About</a></li>
       <li><a href="/en/services.html">Services</a></li>
-      <li><a href="/en/datagenerator/">Apps</a></li>
+      <li><a href="/en/index.html#applications">Apps</a></li>
 
       <li><a href="/en/#contact">Contact</a></li>
-      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead</a></li>
-      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="/mentions-legales.html" class="lang-switch" onclick="localStorage.setItem('dahoni_lang','fr')">FR</a></li>
+      <li class="nav-divider"></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+      <li class="lang-toggle-item">
+        <div class="lang-toggle">
+          <a href="/mentions-legales.html" class="lang-toggle-link" onclick="localStorage.setItem('dahoni_lang','fr')">FR</a>
+          <span class="lang-toggle-active">EN</span>
+        </div>
+      </li>
     </ul>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span>

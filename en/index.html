@@ -24,7 +24,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <script>
     if (!localStorage.getItem('dahoni_lang')) {
@@ -46,12 +46,18 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="/en/services.html">Services</a></li>
-      <li><a href="/en/datagenerator/">Apps</a></li>
+      <li><a href="#applications">Apps</a></li>
 
       <li><a href="#contact">Contact</a></li>
-      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead</a></li>
-      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="/" class="lang-switch" onclick="localStorage.setItem('dahoni_lang','fr')">FR</a></li>
+      <li class="nav-divider"></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+      <li class="lang-toggle-item">
+        <div class="lang-toggle">
+          <a href="/" class="lang-toggle-link" onclick="localStorage.setItem('dahoni_lang','fr')">FR</a>
+          <span class="lang-toggle-active">EN</span>
+        </div>
+      </li>
     </ul>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span>
@@ -63,15 +69,17 @@
   <!-- ── Hero ──────────────────────────────────────────────────────────── -->
   <section id="hero">
     <div>
-      <h1>Unlock Salesforce's full potential</h1>
-      <h2>Salesforce CRM Consulting & Architecture in Paris</h2>
+      <div class="section-label">00 / Introduction</div>
+      <h1>Unlock Salesforce's full potential.</h1>
+      <h2>Salesforce CRM Consulting & Architecture in Paris. Strategic guidance and hands-on implementation for global enterprises.</h2>
       <a href="#contact" class="btn">Get in touch</a>
     </div>
   </section>
 
   <!-- ── About ─────────────────────────────────────────────────────────── -->
   <section id="about">
-    <div class="section-inner" style="text-align:center">
+    <div class="section-inner">
+      <div class="section-label">01 / About me</div>
       <h2 class="section-title">About me</h2>
       <p>
         I am Antika, an independent CRM consultant and architect with more than 15 years of experience on Salesforce.
@@ -79,13 +87,14 @@
       <p>
         My expertise covers business requirements analysis, scoping, functional and technical solution architecture, configuration, development, and deployment of applications across Sales Cloud, Service Cloud, Financial Services Cloud, Experience Cloud, and Marketing Cloud.
       </p>
-      <div style="text-align:center; margin-top:2rem"><a href="#contact" class="btn">Get in touch</a></div>
+      <div style="margin-top:2rem"><a href="#contact" class="btn">Get in touch</a></div>
     </div>
   </section>
 
   <!-- ── Certifications ─────────────────────────────────────────────────── -->
   <section id="certifications">
     <div class="section-inner">
+      <div class="section-label">02 / Certifications</div>
       <h2 class="section-title">Certifications</h2>
       <p>
         Triple Star Ranger on Trailhead · 15 active Salesforce certifications
@@ -131,9 +140,33 @@
     </div>
   </section>
 
+  <!-- ── Apps ──────────────────────────────────────────────────────────── -->
+  <section id="applications">
+    <div class="section-inner">
+      <div class="section-label">03 / Apps</div>
+      <div class="section-header">
+        <h2 class="section-title">Focused tools built from real client engagements.</h2>
+        <p>AppExchange solutions and utilities addressing recurring gaps in enterprise Salesforce deployments.</p>
+      </div>
+
+      <div class="apps-grid">
+        <a href="/en/datagenerator/" class="app-card">
+          <div class="app-card-visual">
+            <img src="../images/datagenerator/card.png" alt="Data Generator – native Salesforce application" loading="lazy" />
+          </div>
+          <span class="app-card-tag">AppExchange</span>
+          <h3>Data Generator</h3>
+          <p>Generate realistic test data in seconds, on any standard or custom Salesforce object.</p>
+          <span class="app-card-cta">Discover the app →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Pro Bono Commitment ───────────────────────────────────────────── -->
   <section id="probono">
-    <div class="section-inner" style="text-align:center">
+    <div class="section-inner">
+      <div class="section-label">04 / Pro bono</div>
       <h2 class="section-title">Pro Bono Commitment</h2>
       <p>
         I dedicate part of my activity to supporting nonprofits and impact-driven organizations in their adoption of Salesforce, free of charge, in the spirit of the Salesforce 1-1-1 model.
@@ -142,17 +175,33 @@
     </div>
   </section>
 
-  <!-- ── CTA Banner ─────────────────────────────────────────────────────── -->
-  <section id="cta">
-    <h2>Have a question?</h2>
-    <a href="#contact" class="btn">Get in touch</a>
-  </section>
-
-  <!-- ── Contact Form ───────────────────────────────────────────────────── -->
+  <!-- ── Contact ───────────────────────────────────────────────────────── -->
   <section id="contact">
     <div class="section-inner">
-      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
 
+        <div class="contact-info">
+          <div class="section-label">05 / Contact</div>
+          <h2 class="section-title">Have a question? Let's talk.</h2>
+          <p class="contact-intro">
+            Based in Paris, working on site and remotely. Tell me about your project — I'll be glad to help.
+          </p>
+          <dl class="contact-meta">
+            <div>
+              <dt>Location</dt>
+              <dd>Paris, France</dd>
+            </div>
+            <div>
+              <dt>Elsewhere</dt>
+              <dd>
+                <a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                <a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead ↗</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="contact-form-col">
       <form id="contact-form" action="https://formspree.io/f/mvzvkqrv" method="POST">
         <input type="hidden" name="_subject" id="email-subject" value="New message – Dahoni" />
         <div class="form-grid">
@@ -198,6 +247,9 @@
 
       <div id="form-success">Thank you! We will get back to you as soon as possible.</div>
       <div id="form-error">An error occurred while sending your message. Please try again.</div>
+        </div>
+
+      </div>
     </div>
   </section>
 
