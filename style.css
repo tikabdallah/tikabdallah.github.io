@@ -34,6 +34,18 @@ body {
 
 h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -0.01em; }
 
+/* Flèches inline (remplacent ↗ et → pour éviter le rendu emoji sur mobile) */
+.icon-arrow {
+  width: 0.7em;
+  height: 0.7em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.02em;
+}
+
 /* ─── Navigation ────────────────────────────────────────────────────── */
 nav {
   position: fixed;
@@ -441,11 +453,6 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.app-card:hover .app-card-visual img {
-  transform: scale(1.03);
 }
 
 .app-card-tag {
