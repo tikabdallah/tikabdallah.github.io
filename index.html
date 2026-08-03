@@ -267,8 +267,32 @@
           </div>
 
           <div class="form-group form-full">
+            <label for="company">Société <span class="optional">(facultatif)</span></label>
+            <input type="text" id="company" name="company" autocomplete="organization" />
+          </div>
+
+          <div class="form-group form-full">
             <label for="email">E-Mail <span class="required">*</span></label>
             <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+
+          <div class="form-group form-full">
+            <label for="phone">Téléphone <span class="optional">(facultatif)</span></label>
+            <div class="phone-field">
+              <div class="country-select" data-country-select>
+                <button type="button" class="country-toggle" data-country-toggle aria-haspopup="listbox" aria-expanded="false">
+                  <span data-country-flag>🇫🇷</span>
+                  <span data-country-code>+33</span>
+                  <svg class="country-caret" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <input type="hidden" id="phone-code" name="phone-code" value="+33" data-country-value />
+                <div class="country-panel" data-country-panel hidden>
+                  <input type="text" class="country-search" data-country-search autocomplete="off" />
+                  <ul class="country-list" role="listbox" data-country-list></ul>
+                </div>
+              </div>
+              <input type="tel" id="phone" name="phone" autocomplete="tel-national" placeholder="6 12 34 56 78" />
+            </div>
           </div>
 
           <div class="form-group form-full">
@@ -403,6 +427,8 @@
       });
     })();
   </script>
+
+  <script src="/phone-country.js" defer></script>
 
 </body>
 </html>

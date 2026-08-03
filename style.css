@@ -642,6 +642,7 @@ label {
 }
 
 label .required { color: var(--navy-light); margin-left: 2px; }
+label .optional { color: rgba(15, 27, 61, 0.35); text-transform: none; letter-spacing: normal; font-weight: 400; }
 
 input, select, textarea {
   font-family: var(--font-body);
@@ -662,6 +663,124 @@ input:focus, select:focus, textarea:focus {
 }
 
 select { cursor: pointer; }
+
+.phone-field {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-field input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.country-select {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.country-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 0.85rem;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(15, 27, 61, 0.12);
+  background: #ffffff;
+  color: var(--navy-dark);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.country-toggle:focus,
+.country-toggle[aria-expanded="true"] {
+  outline: none;
+  box-shadow: 0 0 0 1.5px var(--navy-light);
+}
+
+.country-caret {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  opacity: 0.5;
+  margin-left: 2px;
+}
+
+.country-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 20;
+  width: max(260px, 100%);
+  background: #ffffff;
+  padding: 0.5rem;
+  box-shadow: 0 4px 16px rgba(15, 27, 61, 0.18), 0 0 0 1px rgba(15, 27, 61, 0.08);
+}
+
+.country-panel[hidden] { display: none; }
+
+.country-search {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0 0 1px rgba(15, 27, 61, 0.12);
+}
+
+.country-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.country-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+  color: var(--navy-dark);
+}
+
+.country-list li .country-name { flex: 1 1 auto; }
+
+.country-list li .country-dial {
+  opacity: 0.55;
+  font-size: 0.82rem;
+}
+
+.country-list li.active,
+.country-list li:hover {
+  background: var(--pale);
+}
+
+.country-empty {
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  color: rgba(15, 27, 61, 0.5);
+  cursor: default;
+}
+
+@media (max-width: 480px) {
+  .phone-field {
+    flex-direction: column;
+  }
+  .country-select {
+    width: 100%;
+  }
+  .country-toggle {
+    width: 100%;
+  }
+  .country-panel {
+    width: 100%;
+  }
+}
 
 textarea { resize: vertical; min-height: 130px; }
 
