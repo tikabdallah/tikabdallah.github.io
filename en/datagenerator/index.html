@@ -304,6 +304,96 @@
       margin: 0;
     }
 
+    /* ── Beta ── */
+    .dg-beta {
+      background: #ffffff;
+      padding: 5rem 2rem;
+    }
+
+    .dg-beta-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .dg-beta-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .dg-beta-step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      background: var(--color-section-bg);
+      border-radius: 1rem;
+      padding: 1.75rem;
+    }
+
+    .dg-beta-step-num {
+      flex-shrink: 0;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      background: var(--navy-dark);
+      color: var(--pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .dg-beta-step h3 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy-dark);
+      margin: 0 0 0.5rem;
+    }
+
+    .dg-beta-step p {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0 0 1rem;
+    }
+
+    .dg-beta-step p:last-child {
+      margin-bottom: 0;
+    }
+
+    .dg-beta-install-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .dg-btn-outline-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.75rem;
+      border: none;
+      box-shadow: 0 0 0 1px rgba(15, 27, 61, 0.25);
+      color: var(--navy-dark);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: box-shadow 0.2s, background 0.2s, transform 0.15s;
+    }
+
+    .dg-btn-outline-dark:hover {
+      box-shadow: 0 0 0 1px var(--navy-dark);
+      background: rgba(15, 27, 61, 0.05);
+      transform: translateY(-2px);
+    }
+
     /* ── CTA ── */
     .dg-cta {
       background: var(--color-primary);
@@ -334,6 +424,13 @@
 
     .dg-cta .btn:hover {
       background: #ffffff;
+    }
+
+    .dg-cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     /* ── Responsive ── */
@@ -367,6 +464,10 @@
       .dg-screenshot-row.reverse {
         grid-template-columns: 1fr;
         direction: ltr;
+      }
+
+      .dg-beta-step {
+        flex-direction: column;
       }
     }
 
@@ -412,7 +513,7 @@
       <div class="dg-hero-content">
         <div class="dg-hero-badges">
           <span class="dg-hero-eyebrow">Native Salesforce App</span>
-          <span class="dg-hero-pill"><span class="dg-hero-pill-dot"></span>Coming soon on AppExchange</span>
+          <span class="dg-hero-pill"><span class="dg-hero-pill-dot"></span>Beta available now</span>
         </div>
         <h1>Data Generator</h1>
         <p class="dg-hero-tagline">Generate your test and demo data<br /><span>in seconds</span></p>
@@ -420,12 +521,51 @@
           Data Generator is a free native Salesforce app that lets you create realistic records on any standard or custom object — whether you're testing your developments or impressing during a client demo. No code, no CSV, no friction.
         </p>
         <div class="dg-hero-actions">
-          <a href="#features" class="btn-solid-light">Explore features</a>
+          <a href="#beta" class="btn-solid-light">Install the beta</a>
+          <a href="#features" class="btn-outline">Explore features</a>
           <a href="#screenshots" class="btn-outline">See the app in action</a>
         </div>
       </div>
       <div class="dg-hero-image">
         <img src="../../images/datagenerator/hero.png" alt="Data Generator — Salesforce app interface" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Beta ─────────────────────────────────────────────────────────────── -->
+  <section class="dg-beta" id="beta">
+    <div class="dg-beta-inner">
+      <h2 class="dg-section-title">Try the beta today</h2>
+      <p class="dg-section-sub">Data Generator isn't listed on the AppExchange yet, but you can install the beta package right now and start generating data in a few minutes.</p>
+
+      <div class="dg-beta-steps">
+        <div class="dg-beta-step">
+          <span class="dg-beta-step-num">1</span>
+          <div>
+            <h3>Install the package</h3>
+            <p>Choose the install link that matches your org.</p>
+            <div class="dg-beta-install-links">
+              <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04tJ9000000p6ALIAY" target="_blank" rel="noopener" class="btn">Install for a dev / scratch org</a>
+              <a href="https://test.salesforce.com/packaging/installPackage.apexp?p0=04tJ9000000p6ALIAY" target="_blank" rel="noopener" class="dg-btn-outline-dark">Install into a sandbox</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dg-beta-step">
+          <span class="dg-beta-step-num">2</span>
+          <div>
+            <h3>Assign the permission set</h3>
+            <p>Assign yourself the <strong>"Data Generator User"</strong> permission set.</p>
+          </div>
+        </div>
+
+        <div class="dg-beta-step">
+          <span class="dg-beta-step-num">3</span>
+          <div>
+            <h3>Give it a try</h3>
+            <p>Open the Data Generator app (App Launcher → search "Data Generator"), select <strong>New Generation from a Template</strong>, choose the <strong>Sample</strong> template, click <strong>Create</strong>, then <strong>Save &amp; Run</strong>.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -522,8 +662,11 @@
   <!-- ── CTA ──────────────────────────────────────────────────────────────── -->
   <section class="dg-cta">
     <h2>Ready to save time on your tests and demos?</h2>
-    <p>Data Generator will soon be available for free on AppExchange.</p>
-    <a href="/en/#contact" class="btn">Get in touch to learn more</a>
+    <p>Data Generator is free and available today as a beta package, while we prepare its listing on the AppExchange.</p>
+    <div class="dg-cta-actions">
+      <a href="#beta" class="btn">Install the beta</a>
+      <a href="/en/#contact" class="btn-outline">Get in touch</a>
+    </div>
   </section>
 
   <!-- ── Footer ───────────────────────────────────────────────────────────── -->
