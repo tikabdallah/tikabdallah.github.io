@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RKC02J4GS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7RKC02J4GS');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Install Data Generator · Dahoni</title>
+  <meta name="description" content="Fill in your details to receive the install link for the Data Generator beta package." />
+  <meta name="robots" content="noindex, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dahoni.com/en/datagenerator/installation.html" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Dahoni" />
+  <meta property="og:title" content="Install Data Generator · Dahoni" />
+  <meta property="og:description" content="Fill in your details to receive the install link for the Data Generator beta package." />
+  <meta property="og:image" content="https://dahoni.com/images/social-preview.jpeg" />
+
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+
+  <link rel="canonical" href="https://dahoni.com/en/datagenerator/installation.html" />
+  <link rel="alternate" hreflang="fr" href="https://dahoni.com/datagenerator/installation.html" />
+  <link rel="alternate" hreflang="en" href="https://dahoni.com/en/datagenerator/installation.html" />
+  <link rel="alternate" hreflang="x-default" href="https://dahoni.com/datagenerator/installation.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../style.css" />
+
+  <style>
+    .dg-install-page {
+      max-width: 640px;
+    }
+
+    .dg-install-page .form-grid {
+      margin-top: 2rem;
+    }
+
+    .dg-org-type-options {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .dg-radio-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: normal;
+      color: var(--navy-dark);
+      cursor: pointer;
+    }
+
+    .dg-radio-label input[type="radio"] {
+      width: auto;
+      box-shadow: none;
+      accent-color: var(--navy-light);
+    }
+
+    .dg-install-hp {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .dg-install-back {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .dg-install-page .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav>
+    <a href="/en/" class="logo-link"><img src="../../images/logo.png" alt="Dahoni" class="logo-img" /></a>
+    <ul>
+      <li><a href="/en/#about">About</a></li>
+      <li><a href="/en/services.html">Services</a></li>
+      <li><a href="/en/datagenerator/" class="active">Apps</a></li>
+
+      <li><a href="/en/#contact">Contact</a></li>
+      <li class="nav-divider"></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead <svg class="icon-arrow icon-arrow-ext" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn <svg class="icon-arrow icon-arrow-ext" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a></li>
+      <li class="lang-toggle-item">
+        <div class="lang-toggle">
+          <a href="/datagenerator/installation.html" class="lang-toggle-link" onclick="localStorage.setItem('dahoni_lang','fr')">FR</a>
+          <span class="lang-toggle-active">EN</span>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ── Content ─────────────────────────────────────────────────────────── -->
+  <main class="page-content dg-install-page">
+    <h1 class="page-title">Install Data Generator</h1>
+    <p>Fill in your details below: you'll be redirected straight to the Salesforce install page once the form is submitted.</p>
+
+    <!-- Salesforce Web-to-Lead form: replace the "oid" value below with the Org ID
+         found under Setup → Web-to-Lead in your Salesforce org. -->
+    <form id="dg-install-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+      <input type="hidden" name="oid" value="00DJ9000002FCKL" />
+      <input type="hidden" name="retURL" id="dg-retURL" value="https://login.salesforce.com/packaging/installPackage.apexp?p0=04tJ9000000p6GPIAY" />
+      <input type="hidden" name="lead_source" value="Website - Data Generator Beta" />
+
+      <div class="dg-install-hp" aria-hidden="true">
+        <label for="dg-hp">Leave this field blank</label>
+        <input type="text" id="dg-hp" name="dg_hp" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="dg-first-name">First name <span class="required">*</span></label>
+          <input type="text" id="dg-first-name" name="first_name" maxlength="40" required autocomplete="given-name" />
+        </div>
+
+        <div class="form-group">
+          <label for="dg-last-name">Last name <span class="required">*</span></label>
+          <input type="text" id="dg-last-name" name="last_name" maxlength="80" required autocomplete="family-name" />
+        </div>
+
+        <div class="form-group form-full">
+          <label for="dg-email">Email <span class="required">*</span></label>
+          <input type="email" id="dg-email" name="email" maxlength="80" required autocomplete="email" />
+        </div>
+
+        <div class="form-group form-full">
+          <label for="dg-company">Company <span class="required">*</span></label>
+          <input type="text" id="dg-company" name="company" maxlength="40" required autocomplete="organization" />
+        </div>
+
+        <div class="form-group form-full">
+          <label>Org type <span class="required">*</span></label>
+          <div class="dg-org-type-options">
+            <label class="dg-radio-label"><input type="radio" name="dg-org-type" value="dev" checked /> Dev / Scratch org</label>
+            <label class="dg-radio-label"><input type="radio" name="dg-org-type" value="sandbox" /> Sandbox</label>
+          </div>
+        </div>
+
+        <div class="form-consent form-full">
+          <input type="checkbox" id="dg-consent" name="dg-consent" required />
+          <span>I agree that this data will be stored and processed by Dahoni to send me the install link and information about Data Generator. <span class="required">*</span></span>
+        </div>
+
+        <div class="form-full">
+          <button type="submit" class="btn">Get the link &amp; install</button>
+        </div>
+      </div>
+    </form>
+
+    <a href="./" class="dg-install-back">← Back to the Data Generator page</a>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      <a href="/en/legal-notice.html">Legal notice</a>
+      ·
+      <a href="/en/privacy-policy.html">Privacy policy</a>
+    </p>
+    <p>© Copyright 2026 Dahoni. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('nav');
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('ul a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    (function () {
+      var DG_INSTALL_LINKS = {
+        dev: 'https://login.salesforce.com/packaging/installPackage.apexp?p0=04tJ9000000p6GPIAY',
+        sandbox: 'https://test.salesforce.com/packaging/installPackage.apexp?p0=04tJ9000000p6GPIAY'
+      };
+      var form = document.getElementById('dg-install-form');
+      var retField = document.getElementById('dg-retURL');
+      var honeypot = document.getElementById('dg-hp');
+
+      var requestedOrg = new URLSearchParams(window.location.search).get('org');
+      if (requestedOrg === 'sandbox') {
+        var sandboxRadio = form.querySelector('input[name="dg-org-type"][value="sandbox"]');
+        sandboxRadio.checked = true;
+        retField.value = DG_INSTALL_LINKS.sandbox;
+      }
+
+      form.querySelectorAll('input[name="dg-org-type"]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          retField.value = DG_INSTALL_LINKS[radio.value];
+        });
+      });
+
+      form.addEventListener('submit', function (e) {
+        if (honeypot.value !== '') {
+          e.preventDefault();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
