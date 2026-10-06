@@ -34,7 +34,7 @@
   <link rel="alternate" hreflang="en" href="https://dahoni.com/en/datagenerator/" />
   <link rel="alternate" hreflang="x-default" href="https://dahoni.com/datagenerator/" />
 
-  <!-- Structured data: SoftwareApplication, FAQPage and BreadcrumbList for the Data Generator hub -->
+  <!-- Structured data: SoftwareApplication and FAQPage for the Data Generator hub -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,13 +69,6 @@
           { "@type": "Question", "name": "Les données générées sortent-elles de mon org Salesforce ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Data Generator ne fait aucun callout externe : toutes les données générées restent à l'intérieur de votre org Salesforce." } },
           { "@type": "Question", "name": "Sur quels types d'org puis-je utiliser Data Generator ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous pouvez générer des données sur une Developer Org, une scratch org ou une sandbox. Un garde-fou intégré empêche toute génération accidentelle sur une org de production." } }
         ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://dahoni.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Data Generator", "item": "https://dahoni.com/datagenerator/" }
-        ]
       }
     ]
   }
@@ -93,7 +86,7 @@
       background-color: var(--color-primary);
       background-image: radial-gradient(circle, rgba(232, 237, 243, 0.10) 1px, transparent 1px);
       background-size: 28px 28px;
-      padding: 3rem 2rem;
+      padding: calc(var(--nav-height) + 3rem) 2rem 3rem;
     }
 
     .dg-hero-inner {
@@ -566,25 +559,6 @@
     </button>
   </nav>
 
-  <!-- ── Sub-navigation ──────────────────────────────────────────────────── -->
-  <nav class="dg-subnav" aria-label="Sections Data Generator">
-    <div class="dg-subnav-inner">
-      <a href="#fonctionnalites">Fonctionnalités</a>
-      <a href="/datagenerator/documentation/">Documentation</a>
-      <a href="/datagenerator/cas-usage/">Cas d'usage</a>
-      <a href="/datagenerator/faq/">FAQ</a>
-      <a href="installation.html" class="dg-subnav-cta">Installer</a>
-    </div>
-  </nav>
-
-  <!-- ── Breadcrumb ──────────────────────────────────────────────────────── -->
-  <nav class="dg-breadcrumb" aria-label="Fil d'Ariane">
-    <ol>
-      <li><a href="/">Accueil</a></li>
-      <li aria-current="page">Data Generator</li>
-    </ol>
-  </nav>
-
   <!-- ── Hero ────────────────────────────────────────────────────────────── -->
   <section class="dg-hero">
     <div class="dg-hero-inner">
@@ -759,7 +733,6 @@
   <section class="dg-features" id="faq">
     <div class="dg-features-inner">
       <h2 class="dg-section-title">Questions fréquentes</h2>
-      <p class="dg-section-sub">Les réponses courtes. Pour le détail, consultez la <a href="faq/">FAQ complète</a>.</p>
 
       <div class="dg-faq-list">
         <details class="dg-faq-item">
@@ -786,33 +759,6 @@
           <summary>Sur quels types d'org puis-je utiliser Data Generator ?</summary>
           <p>Vous pouvez générer des données sur une Developer Org, une scratch org ou une sandbox. Un garde-fou intégré empêche toute génération accidentelle sur une org de production.</p>
         </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Resources ────────────────────────────────────────────────────────── -->
-  <section class="dg-screenshots" id="ressources">
-    <div class="dg-screenshots-inner">
-      <h2 class="dg-section-title" style="margin-bottom: 0.5rem;">Ressources</h2>
-      <p class="dg-section-sub">Documentation, sécurité et questions fréquentes.</p>
-
-      <div class="dg-resources-grid">
-        <a class="dg-resource-card" href="documentation/">
-          <h3>Documentation</h3>
-          <p>Guides pas à pas pour installer et configurer Data Generator.</p>
-        </a>
-        <a class="dg-resource-card" href="documentation/demarrage-rapide/">
-          <h3>Démarrage rapide</h3>
-          <p>Les étapes pour lancer votre première génération en quelques minutes.</p>
-        </a>
-        <a class="dg-resource-card" href="securite-et-rgpd/">
-          <h3>Sécurité et RGPD</h3>
-          <p>Ce que Data Generator fait, et ne fait pas, avec vos données.</p>
-        </a>
-        <a class="dg-resource-card" href="faq/">
-          <h3>FAQ</h3>
-          <p>Toutes les questions fréquentes sur Data Generator.</p>
-        </a>
       </div>
     </div>
   </section>

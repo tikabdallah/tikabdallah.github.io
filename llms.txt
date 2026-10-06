@@ -17,12 +17,8 @@ Dahoni propose des missions de conseil et d'architecture CRM Salesforce pour des
 
 ### Pages Data Generator
 
-- [Data Generator](https://dahoni.com/datagenerator/) : présentation de l'application, fonctionnalités, captures d'écran et installation du package bêta.
+- [Data Generator](https://dahoni.com/datagenerator/) : présentation de l'application, fonctionnalités, FAQ, captures d'écran et installation du package bêta.
 - [Installer Data Generator](https://dahoni.com/datagenerator/installation.html) : formulaire pour recevoir le lien d'installation du package Salesforce.
-- [Documentation](https://dahoni.com/datagenerator/documentation/) : guides d'installation et de configuration.
-- [Démarrage rapide](https://dahoni.com/datagenerator/documentation/demarrage-rapide/) : les étapes pour installer le package et lancer une première génération.
-- [Sécurité et RGPD](https://dahoni.com/datagenerator/securite-et-rgpd/) : fonctionnement technique, absence de callout externe, garde-fou de production.
-- [FAQ](https://dahoni.com/datagenerator/faq/) : questions fréquentes sur les objets supportés, les objets liés, la suppression des données et l'automatisation.
 
 ## Pages
 

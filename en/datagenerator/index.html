@@ -34,7 +34,7 @@
   <link rel="alternate" hreflang="en" href="https://dahoni.com/en/datagenerator/" />
   <link rel="alternate" hreflang="x-default" href="https://dahoni.com/datagenerator/" />
 
-  <!-- Structured data: SoftwareApplication, FAQPage and BreadcrumbList for the Data Generator hub -->
+  <!-- Structured data: SoftwareApplication and FAQPage for the Data Generator hub -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,13 +69,6 @@
           { "@type": "Question", "name": "Does generated data ever leave my Salesforce org?", "acceptedAnswer": { "@type": "Answer", "text": "No. Data Generator makes no external callouts: everything stays inside your Salesforce org." } },
           { "@type": "Question", "name": "Which org types can I use Data Generator on?", "acceptedAnswer": { "@type": "Answer", "text": "You can generate data on a Developer Org, a scratch org, or a sandbox. A built-in safeguard prevents accidental generation on a production org." } }
         ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dahoni.com/en/" },
-          { "@type": "ListItem", "position": 2, "name": "Data Generator", "item": "https://dahoni.com/en/datagenerator/" }
-        ]
       }
     ]
   }
@@ -93,7 +86,7 @@
       background-color: var(--color-primary);
       background-image: radial-gradient(circle, rgba(232, 237, 243, 0.10) 1px, transparent 1px);
       background-size: 28px 28px;
-      padding: 3rem 2rem;
+      padding: calc(var(--nav-height) + 3rem) 2rem 3rem;
     }
 
     .dg-hero-inner {
@@ -566,25 +559,6 @@
     </button>
   </nav>
 
-  <!-- ── Sub-navigation ──────────────────────────────────────────────────── -->
-  <nav class="dg-subnav" aria-label="Data Generator sections">
-    <div class="dg-subnav-inner">
-      <a href="#features">Features</a>
-      <a href="/en/datagenerator/documentation/">Documentation</a>
-      <a href="/en/datagenerator/use-cases/">Use cases</a>
-      <a href="/en/datagenerator/faq/">FAQ</a>
-      <a href="installation.html" class="dg-subnav-cta">Install</a>
-    </div>
-  </nav>
-
-  <!-- ── Breadcrumb ──────────────────────────────────────────────────────── -->
-  <nav class="dg-breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      <li><a href="/en/">Home</a></li>
-      <li aria-current="page">Data Generator</li>
-    </ol>
-  </nav>
-
   <!-- ── Hero ────────────────────────────────────────────────────────────── -->
   <section class="dg-hero">
     <div class="dg-hero-inner">
@@ -759,7 +733,6 @@
   <section class="dg-features" id="faq">
     <div class="dg-features-inner">
       <h2 class="dg-section-title">Frequently asked questions</h2>
-      <p class="dg-section-sub">The short answers. For more detail, see the <a href="faq/">full FAQ</a>.</p>
 
       <div class="dg-faq-list">
         <details class="dg-faq-item">
@@ -786,33 +759,6 @@
           <summary>Which org types can I use Data Generator on?</summary>
           <p>You can generate data on a Developer Org, a scratch org, or a sandbox. A built-in safeguard prevents accidental generation on a production org.</p>
         </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Resources ────────────────────────────────────────────────────────── -->
-  <section class="dg-screenshots" id="resources">
-    <div class="dg-screenshots-inner">
-      <h2 class="dg-section-title" style="margin-bottom: 0.5rem;">Resources</h2>
-      <p class="dg-section-sub">Documentation, security, and frequently asked questions.</p>
-
-      <div class="dg-resources-grid">
-        <a class="dg-resource-card" href="documentation/">
-          <h3>Documentation</h3>
-          <p>Step-by-step guides to install and configure Data Generator.</p>
-        </a>
-        <a class="dg-resource-card" href="documentation/quick-start/">
-          <h3>Quick start</h3>
-          <p>The steps to run your first generation in a few minutes.</p>
-        </a>
-        <a class="dg-resource-card" href="security-and-gdpr/">
-          <h3>Security and GDPR</h3>
-          <p>What Data Generator does, and does not, do with your data.</p>
-        </a>
-        <a class="dg-resource-card" href="faq/">
-          <h3>FAQ</h3>
-          <p>All the frequently asked questions about Data Generator.</p>
-        </a>
       </div>
     </div>
   </section>
