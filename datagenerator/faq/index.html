@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RKC02J4GS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7RKC02J4GS');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Data Generator : questions fréquentes | Dahoni</title>
+  <meta name="description" content="Toutes les réponses sur Dahoni Data Generator : objets supportés, objets liés, suppression des données, automatisation, langues et sécurité." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dahoni.com/datagenerator/faq/" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="Dahoni" />
+  <meta property="og:title" content="FAQ Data Generator : questions fréquentes | Dahoni" />
+  <meta property="og:description" content="Toutes les réponses sur Dahoni Data Generator : objets supportés, objets liés, suppression des données, automatisation, langues et sécurité." />
+  <meta property="og:image" content="https://dahoni.com/images/datagenerator/social-preview-fr.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAQ Data Generator : questions fréquentes | Dahoni" />
+  <meta name="twitter:description" content="Toutes les réponses sur Dahoni Data Generator : objets supportés, objets liés, suppression des données, automatisation, langues et sécurité." />
+  <meta name="twitter:image" content="https://dahoni.com/images/datagenerator/social-preview-fr.jpeg" />
+
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+
+  <link rel="canonical" href="https://dahoni.com/datagenerator/faq/" />
+  <link rel="alternate" hreflang="fr" href="https://dahoni.com/datagenerator/faq/" />
+  <link rel="alternate" hreflang="en" href="https://dahoni.com/en/datagenerator/faq/" />
+  <link rel="alternate" hreflang="x-default" href="https://dahoni.com/datagenerator/faq/" />
+
+  <!-- Structured data: FAQPage and BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Qu'est-ce que Dahoni Data Generator ?", "acceptedAnswer": { "@type": "Answer", "text": "Dahoni Data Generator est une application Salesforce native et gratuite qui génère des données de test réalistes sur n'importe quel objet standard ou personnalisé, sans code ni CSV." } },
+          { "@type": "Question", "name": "Data Generator est-il gratuit ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Data Generator est gratuit, disponible dès maintenant en version bêta en attendant sa publication sur l'AppExchange." } },
+          { "@type": "Question", "name": "Sur quels objets Salesforce Data Generator fonctionne-t-il ?", "acceptedAnswer": { "@type": "Answer", "text": "Data Generator fonctionne sur tout objet standard ou personnalisé de votre org, y compris les objets de managed packages comme CPQ (par exemple SBQQ__Quote__c)." } },
+          { "@type": "Question", "name": "Data Generator peut-il générer des objets liés entre eux ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Vous pouvez générer en une seule exécution des objets liés entre eux via des champs de référence, ainsi que des objets totalement indépendants dans le même run." } },
+          { "@type": "Question", "name": "Les données générées sortent-elles de mon org Salesforce ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Data Generator ne fait aucun callout externe : toutes les données générées restent à l'intérieur de votre org Salesforce." } },
+          { "@type": "Question", "name": "Sur quels types d'org puis-je utiliser Data Generator ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous pouvez générer des données sur une Developer Org, une scratch org ou une sandbox. Un garde-fou intégré empêche toute génération accidentelle sur une org de production." } },
+          { "@type": "Question", "name": "Comment installer Dahoni Data Generator ?", "acceptedAnswer": { "@type": "Answer", "text": "Depuis la page d'installation, choisissez le lien correspondant à votre org (dev/scratch ou sandbox), renseignez vos informations, puis installez le package. Assignez-vous ensuite le permission set « Data Generator User »." } },
+          { "@type": "Question", "name": "Qu'est-ce qu'un template dans Data Generator ?", "acceptedAnswer": { "@type": "Answer", "text": "Un template est une configuration de génération réutilisable : objets, champs, règles de génération. Un template Sample (Sales Cloud) est fourni à l'installation, et vous pouvez créer et sauvegarder vos propres templates." } },
+          { "@type": "Question", "name": "Puis-je supprimer les données générées ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Data Generator permet de supprimer en un clic tous les enregistrements créés lors d'une génération donnée." } },
+          { "@type": "Question", "name": "Data Generator garde-t-il un historique des générations ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Chaque génération est enregistrée dans un historique qui indique le nombre d'enregistrements créés, la date et les éventuelles erreurs." } },
+          { "@type": "Question", "name": "Data Generator peut-il s'exécuter automatiquement après un rafraîchissement de sandbox ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, via le SandboxPostCopyHandler natif de Salesforce : configurez un template pour qu'il s'exécute automatiquement à chaque refresh de la sandbox." } },
+          { "@type": "Question", "name": "Dans quelles langues Data Generator est-il disponible ?", "acceptedAnswer": { "@type": "Answer", "text": "L'interface et les données générées sont disponibles en français et en anglais." } }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://dahoni.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Data Generator", "item": "https://dahoni.com/datagenerator/" },
+          { "@type": "ListItem", "position": 3, "name": "FAQ", "item": "https://dahoni.com/datagenerator/faq/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../style.css" />
+
+  <style>
+    .dg-faq-page .dg-faq-list { margin-top: 2rem; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav>
+    <a href="/" class="logo-link"><img src="../../images/logo.png" alt="Dahoni" class="logo-img" /></a>
+    <ul>
+      <li><a href="/#apropos">À propos</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/datagenerator/" class="active">Applications</a></li>
+
+      <li><a href="/#contact">Contact</a></li>
+      <li class="nav-divider"></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead <svg class="icon-arrow icon-arrow-ext" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn <svg class="icon-arrow icon-arrow-ext" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a></li>
+      <li class="lang-toggle-item">
+        <div class="lang-toggle">
+          <span class="lang-toggle-active">FR</span>
+          <a href="/en/datagenerator/faq/" class="lang-toggle-link" onclick="localStorage.setItem('dahoni_lang','en')">EN</a>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ── Sub-navigation ──────────────────────────────────────────────────── -->
+  <nav class="dg-subnav" aria-label="Sections Data Generator">
+    <div class="dg-subnav-inner">
+      <a href="/datagenerator/#fonctionnalites">Fonctionnalités</a>
+      <a href="/datagenerator/documentation/">Documentation</a>
+      <a href="/datagenerator/cas-usage/">Cas d'usage</a>
+      <a href="/datagenerator/faq/" class="active">FAQ</a>
+      <a href="/datagenerator/installation.html" class="dg-subnav-cta">Installer</a>
+    </div>
+  </nav>
+
+  <!-- ── Breadcrumb ──────────────────────────────────────────────────────── -->
+  <nav class="dg-breadcrumb" aria-label="Fil d'Ariane">
+    <ol>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/datagenerator/">Data Generator</a></li>
+      <li aria-current="page">FAQ</li>
+    </ol>
+  </nav>
+
+  <!-- ── Contenu ─────────────────────────────────────────────────────────── -->
+  <main class="page-content has-subnav dg-faq-page">
+    <h1 class="page-title">Questions fréquentes</h1>
+    <p>Dahoni Data Generator est une application Salesforce native et gratuite qui génère des données de test réalistes sur n'importe quel objet standard ou personnalisé, sans code ni CSV. Voici les réponses aux questions les plus courantes.</p>
+
+    <div class="dg-faq-list">
+      <details class="dg-faq-item">
+        <summary>Qu'est-ce que Dahoni Data Generator ?</summary>
+        <p>Dahoni Data Generator est une application Salesforce native et gratuite qui génère des données de test réalistes sur n'importe quel objet standard ou personnalisé, sans code ni CSV.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Data Generator est-il gratuit ?</summary>
+        <p>Oui. Data Generator est gratuit, disponible dès maintenant en version bêta en attendant sa publication sur l'AppExchange.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Sur quels objets Salesforce Data Generator fonctionne-t-il ?</summary>
+        <p>Data Generator fonctionne sur tout objet standard ou personnalisé de votre org, y compris les objets de managed packages comme CPQ (par exemple SBQQ__Quote__c).</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Data Generator peut-il générer des objets liés entre eux ?</summary>
+        <p>Oui. Vous pouvez générer en une seule exécution des objets liés entre eux via des champs de référence, ainsi que des objets totalement indépendants dans le même run.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Les données générées sortent-elles de mon org Salesforce ?</summary>
+        <p>Non. Data Generator ne fait aucun callout externe : toutes les données générées restent à l'intérieur de votre org Salesforce. Voir la page <a href="/datagenerator/securite-et-rgpd/">Sécurité et RGPD</a> pour le détail.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Sur quels types d'org puis-je utiliser Data Generator ?</summary>
+        <p>Vous pouvez générer des données sur une Developer Org, une scratch org ou une sandbox. Un garde-fou intégré empêche toute génération accidentelle sur une org de production.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Comment installer Dahoni Data Generator ?</summary>
+        <p>Depuis la page d'installation, choisissez le lien correspondant à votre org (dev/scratch ou sandbox), renseignez vos informations, puis installez le package. Assignez-vous ensuite le permission set « Data Generator User ». Le détail est expliqué dans le <a href="/datagenerator/documentation/demarrage-rapide/">guide de démarrage rapide</a>.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Qu'est-ce qu'un template dans Data Generator ?</summary>
+        <p>Un template est une configuration de génération réutilisable : objets, champs, règles de génération. Un template Sample (Sales Cloud) est fourni à l'installation, et vous pouvez créer et sauvegarder vos propres templates.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Puis-je supprimer les données générées ?</summary>
+        <p>Oui. Data Generator permet de supprimer en un clic tous les enregistrements créés lors d'une génération donnée.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Data Generator garde-t-il un historique des générations ?</summary>
+        <p>Oui. Chaque génération est enregistrée dans un historique qui indique le nombre d'enregistrements créés, la date et les éventuelles erreurs.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Data Generator peut-il s'exécuter automatiquement après un rafraîchissement de sandbox ?</summary>
+        <p>Oui, via le SandboxPostCopyHandler natif de Salesforce : configurez un template pour qu'il s'exécute automatiquement à chaque refresh de la sandbox.</p>
+      </details>
+      <details class="dg-faq-item">
+        <summary>Dans quelles langues Data Generator est-il disponible ?</summary>
+        <p>L'interface et les données générées sont disponibles en français et en anglais.</p>
+      </details>
+    </div>
+
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li><a href="/datagenerator/documentation/">Documentation</a> : tous les guides Data Generator.</li>
+      <li><a href="/datagenerator/securite-et-rgpd/">Sécurité et RGPD</a> : le détail du fonctionnement technique.</li>
+      <li><a href="/datagenerator/">Page Data Generator</a> : présentation générale de l'application.</li>
+    </ul>
+
+    <p><a href="/datagenerator/installation.html" class="btn">Installer le package</a></p>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      <a href="/mentions-legales.html">Mentions légales</a>
+      ·
+      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    </p>
+    <p>© Copyright 2026 Dahoni. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('nav');
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('ul a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

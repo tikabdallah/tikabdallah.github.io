@@ -11,20 +11,75 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Generator · App Salesforce | Dahoni</title>
-  <meta name="description" content="Data Generator est une application Salesforce native. Générez des données de test réalistes en quelques secondes sur n'importe quel objet standard ou personnalisé." />
+  <title>Data Generator : données de test Salesforce | Dahoni</title>
+  <meta name="description" content="Dahoni Data Generator génère des données de test Salesforce réalistes sur tout objet standard ou personnalisé, sans code ni CSV. App native, gratuite." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dahoni.com/datagenerator" />
+  <meta property="og:url" content="https://dahoni.com/datagenerator/" />
   <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:site_name" content="Dahoni" />
-  <meta property="og:title" content="Data Generator · App Salesforce | Dahoni" />
-  <meta property="og:description" content="Générez des données de test réalistes en quelques secondes sur n'importe quel objet Salesforce standard ou personnalisé." />
+  <meta property="og:title" content="Data Generator : données de test Salesforce | Dahoni" />
+  <meta property="og:description" content="Dahoni Data Generator génère des données de test Salesforce réalistes sur tout objet standard ou personnalisé, sans code ni CSV." />
   <meta property="og:image" content="https://dahoni.com/images/datagenerator/social-preview-fr.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Generator : données de test Salesforce | Dahoni" />
+  <meta name="twitter:description" content="Dahoni Data Generator génère des données de test Salesforce réalistes sur tout objet standard ou personnalisé, sans code ni CSV." />
+  <meta name="twitter:image" content="https://dahoni.com/images/datagenerator/social-preview-fr.jpeg" />
 
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
 
-  <link rel="canonical" href="https://dahoni.com/datagenerator" />
+  <link rel="canonical" href="https://dahoni.com/datagenerator/" />
+  <link rel="alternate" hreflang="fr" href="https://dahoni.com/datagenerator/" />
+  <link rel="alternate" hreflang="en" href="https://dahoni.com/en/datagenerator/" />
+  <link rel="alternate" hreflang="x-default" href="https://dahoni.com/datagenerator/" />
+
+  <!-- Structured data: SoftwareApplication, FAQPage and BreadcrumbList for the Data Generator hub -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Dahoni Data Generator",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Salesforce",
+        "description": "Dahoni Data Generator est une application Salesforce native et gratuite qui génère des données de test réalistes sur n'importe quel objet standard ou personnalisé, sans code ni CSV.",
+        "url": "https://dahoni.com/datagenerator/",
+        "image": "https://dahoni.com/images/datagenerator/social-preview-fr.jpeg",
+        "inLanguage": ["fr", "en"],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dahoni",
+          "url": "https://dahoni.com/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Qu'est-ce que Dahoni Data Generator ?", "acceptedAnswer": { "@type": "Answer", "text": "Dahoni Data Generator est une application Salesforce native et gratuite qui génère des données de test réalistes sur n'importe quel objet standard ou personnalisé, sans code ni CSV." } },
+          { "@type": "Question", "name": "Data Generator est-il gratuit ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Data Generator est gratuit, disponible dès maintenant en version bêta en attendant sa publication sur l'AppExchange." } },
+          { "@type": "Question", "name": "Sur quels objets Salesforce Data Generator fonctionne-t-il ?", "acceptedAnswer": { "@type": "Answer", "text": "Data Generator fonctionne sur tout objet standard ou personnalisé de votre org, y compris les objets de managed packages comme CPQ (par exemple SBQQ__Quote__c)." } },
+          { "@type": "Question", "name": "Data Generator peut-il générer des objets liés entre eux ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Vous pouvez générer en une seule exécution des objets liés entre eux via des champs de référence, ainsi que des objets totalement indépendants dans le même run." } },
+          { "@type": "Question", "name": "Les données générées sortent-elles de mon org Salesforce ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Data Generator ne fait aucun callout externe : toutes les données générées restent à l'intérieur de votre org Salesforce." } },
+          { "@type": "Question", "name": "Sur quels types d'org puis-je utiliser Data Generator ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous pouvez générer des données sur une Developer Org, une scratch org ou une sandbox. Un garde-fou intégré empêche toute génération accidentelle sur une org de production." } }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://dahoni.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Data Generator", "item": "https://dahoni.com/datagenerator/" }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +93,7 @@
       background-color: var(--color-primary);
       background-image: radial-gradient(circle, rgba(232, 237, 243, 0.10) 1px, transparent 1px);
       background-size: 28px 28px;
-      padding: calc(var(--nav-height) + 3rem) 2rem 3rem;
+      padding: 3rem 2rem;
     }
 
     .dg-hero-inner {
@@ -511,6 +566,25 @@
     </button>
   </nav>
 
+  <!-- ── Sub-navigation ──────────────────────────────────────────────────── -->
+  <nav class="dg-subnav" aria-label="Sections Data Generator">
+    <div class="dg-subnav-inner">
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="/datagenerator/documentation/">Documentation</a>
+      <a href="/datagenerator/cas-usage/">Cas d'usage</a>
+      <a href="/datagenerator/faq/">FAQ</a>
+      <a href="installation.html" class="dg-subnav-cta">Installer</a>
+    </div>
+  </nav>
+
+  <!-- ── Breadcrumb ──────────────────────────────────────────────────────── -->
+  <nav class="dg-breadcrumb" aria-label="Fil d'Ariane">
+    <ol>
+      <li><a href="/">Accueil</a></li>
+      <li aria-current="page">Data Generator</li>
+    </ol>
+  </nav>
+
   <!-- ── Hero ────────────────────────────────────────────────────────────── -->
   <section class="dg-hero">
     <div class="dg-hero-inner">
@@ -531,7 +605,7 @@
         </div>
       </div>
       <div class="dg-hero-image">
-        <img src="../images/datagenerator/hero.png" alt="Data Generator — interface de l'application Salesforce" />
+        <img src="../images/datagenerator/hero.png" alt="Data Generator : interface de l'application Salesforce" />
       </div>
     </div>
   </section>
@@ -678,6 +752,68 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ── FAQ ──────────────────────────────────────────────────────────────── -->
+  <section class="dg-features" id="faq">
+    <div class="dg-features-inner">
+      <h2 class="dg-section-title">Questions fréquentes</h2>
+      <p class="dg-section-sub">Les réponses courtes. Pour le détail, consultez la <a href="faq/">FAQ complète</a>.</p>
+
+      <div class="dg-faq-list">
+        <details class="dg-faq-item">
+          <summary>Qu'est-ce que Dahoni Data Generator ?</summary>
+          <p>Dahoni Data Generator est une application Salesforce native et gratuite qui génère des données de test réalistes sur n'importe quel objet standard ou personnalisé, sans code ni CSV.</p>
+        </details>
+        <details class="dg-faq-item">
+          <summary>Data Generator est-il gratuit ?</summary>
+          <p>Oui. Data Generator est gratuit, disponible dès maintenant en version bêta en attendant sa publication sur l'AppExchange.</p>
+        </details>
+        <details class="dg-faq-item">
+          <summary>Sur quels objets Salesforce Data Generator fonctionne-t-il ?</summary>
+          <p>Data Generator fonctionne sur tout objet standard ou personnalisé de votre org, y compris les objets de managed packages comme CPQ (par exemple SBQQ__Quote__c).</p>
+        </details>
+        <details class="dg-faq-item">
+          <summary>Data Generator peut-il générer des objets liés entre eux ?</summary>
+          <p>Oui. Vous pouvez générer en une seule exécution des objets liés entre eux via des champs de référence, ainsi que des objets totalement indépendants dans le même run.</p>
+        </details>
+        <details class="dg-faq-item">
+          <summary>Les données générées sortent-elles de mon org Salesforce ?</summary>
+          <p>Non. Data Generator ne fait aucun callout externe : toutes les données générées restent à l'intérieur de votre org Salesforce.</p>
+        </details>
+        <details class="dg-faq-item">
+          <summary>Sur quels types d'org puis-je utiliser Data Generator ?</summary>
+          <p>Vous pouvez générer des données sur une Developer Org, une scratch org ou une sandbox. Un garde-fou intégré empêche toute génération accidentelle sur une org de production.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Resources ────────────────────────────────────────────────────────── -->
+  <section class="dg-screenshots" id="ressources">
+    <div class="dg-screenshots-inner">
+      <h2 class="dg-section-title" style="margin-bottom: 0.5rem;">Ressources</h2>
+      <p class="dg-section-sub">Documentation, sécurité et questions fréquentes.</p>
+
+      <div class="dg-resources-grid">
+        <a class="dg-resource-card" href="documentation/">
+          <h3>Documentation</h3>
+          <p>Guides pas à pas pour installer et configurer Data Generator.</p>
+        </a>
+        <a class="dg-resource-card" href="documentation/demarrage-rapide/">
+          <h3>Démarrage rapide</h3>
+          <p>Les étapes pour lancer votre première génération en quelques minutes.</p>
+        </a>
+        <a class="dg-resource-card" href="securite-et-rgpd/">
+          <h3>Sécurité et RGPD</h3>
+          <p>Ce que Data Generator fait, et ne fait pas, avec vos données.</p>
+        </a>
+        <a class="dg-resource-card" href="faq/">
+          <h3>FAQ</h3>
+          <p>Toutes les questions fréquentes sur Data Generator.</p>
+        </a>
+      </div>
     </div>
   </section>
 

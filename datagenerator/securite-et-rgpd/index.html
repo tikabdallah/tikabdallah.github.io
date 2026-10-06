@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RKC02J4GS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7RKC02J4GS');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sécurité et RGPD de Data Generator | Dahoni</title>
+  <meta name="description" content="Dahoni Data Generator ne fait aucun callout externe : les données générées restent dans votre org Salesforce. Détail du fonctionnement et des garde-fous." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dahoni.com/datagenerator/securite-et-rgpd/" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="Dahoni" />
+  <meta property="og:title" content="Sécurité et RGPD de Data Generator | Dahoni" />
+  <meta property="og:description" content="Dahoni Data Generator ne fait aucun callout externe : les données générées restent dans votre org Salesforce." />
+  <meta property="og:image" content="https://dahoni.com/images/datagenerator/social-preview-fr.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sécurité et RGPD de Data Generator | Dahoni" />
+  <meta name="twitter:description" content="Dahoni Data Generator ne fait aucun callout externe : les données générées restent dans votre org Salesforce." />
+  <meta name="twitter:image" content="https://dahoni.com/images/datagenerator/social-preview-fr.jpeg" />
+
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
+
+  <link rel="canonical" href="https://dahoni.com/datagenerator/securite-et-rgpd/" />
+  <link rel="alternate" hreflang="fr" href="https://dahoni.com/datagenerator/securite-et-rgpd/" />
+  <link rel="alternate" hreflang="en" href="https://dahoni.com/en/datagenerator/security-and-gdpr/" />
+  <link rel="alternate" hreflang="x-default" href="https://dahoni.com/datagenerator/securite-et-rgpd/" />
+
+  <!-- Structured data: TechArticle and BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "headline": "Sécurité et RGPD de Dahoni Data Generator",
+        "description": "Dahoni Data Generator ne fait aucun callout externe : les données générées restent dans votre org Salesforce.",
+        "datePublished": "2026-10-06",
+        "dateModified": "2026-10-06",
+        "inLanguage": "fr",
+        "url": "https://dahoni.com/datagenerator/securite-et-rgpd/",
+        "author": { "@type": "Organization", "name": "Dahoni" },
+        "publisher": { "@type": "Organization", "name": "Dahoni", "url": "https://dahoni.com/" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://dahoni.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Data Generator", "item": "https://dahoni.com/datagenerator/" },
+          { "@type": "ListItem", "position": 3, "name": "Sécurité et RGPD", "item": "https://dahoni.com/datagenerator/securite-et-rgpd/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav>
+    <a href="/" class="logo-link"><img src="../../images/logo.png" alt="Dahoni" class="logo-img" /></a>
+    <ul>
+      <li><a href="/#apropos">À propos</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/datagenerator/" class="active">Applications</a></li>
+
+      <li><a href="/#contact">Contact</a></li>
+      <li class="nav-divider"></li>
+      <li><a href="https://salesforce.com/trailblazer/antikaag" target="_blank" rel="noopener">Trailhead <svg class="icon-arrow icon-arrow-ext" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/aabdallahgrenon/" target="_blank" rel="noopener">LinkedIn <svg class="icon-arrow icon-arrow-ext" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a></li>
+      <li class="lang-toggle-item">
+        <div class="lang-toggle">
+          <span class="lang-toggle-active">FR</span>
+          <a href="/en/datagenerator/security-and-gdpr/" class="lang-toggle-link" onclick="localStorage.setItem('dahoni_lang','en')">EN</a>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ── Sub-navigation ──────────────────────────────────────────────────── -->
+  <nav class="dg-subnav" aria-label="Sections Data Generator">
+    <div class="dg-subnav-inner">
+      <a href="/datagenerator/#fonctionnalites">Fonctionnalités</a>
+      <a href="/datagenerator/documentation/">Documentation</a>
+      <a href="/datagenerator/cas-usage/">Cas d'usage</a>
+      <a href="/datagenerator/faq/">FAQ</a>
+      <a href="/datagenerator/installation.html" class="dg-subnav-cta">Installer</a>
+    </div>
+  </nav>
+
+  <!-- ── Breadcrumb ──────────────────────────────────────────────────────── -->
+  <nav class="dg-breadcrumb" aria-label="Fil d'Ariane">
+    <ol>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/datagenerator/">Data Generator</a></li>
+      <li aria-current="page">Sécurité et RGPD</li>
+    </ol>
+  </nav>
+
+  <!-- ── Contenu ─────────────────────────────────────────────────────────── -->
+  <main class="page-content has-subnav">
+    <h1 class="page-title">Sécurité et RGPD</h1>
+    <p class="update-date">Dernière mise à jour : 6 octobre 2026</p>
+
+    <p>Dahoni Data Generator ne fait aucun callout externe : toutes les données qu'il génère restent à l'intérieur de votre org Salesforce, sans transiter par aucun serveur tiers.</p>
+
+    <h2>Aucune donnée ne sort de votre org</h2>
+    <p>Data Generator fonctionne entièrement en Apex, à l'intérieur de votre org Salesforce. Il ne réalise aucun appel API externe et ne communique avec aucun service hébergé en dehors de Salesforce, ni pour générer les enregistrements, ni pour stocker une configuration. Les templates, les règles de génération et l'historique des exécutions sont stockés dans des objets personnalisés de votre org.</p>
+
+    <h2>Un garde-fou contre la production</h2>
+    <p>Data Generator est conçu pour les environnements de test : Developer Org, scratch org et sandbox. Un garde-fou intégré empêche toute génération accidentelle sur une org de production.</p>
+
+    <h2>Des données synthétiques, pas des données réelles</h2>
+    <p>Data Generator crée des enregistrements fictifs à partir de règles que vous configurez (type de texte, format téléphone, plage de dates, distribution des picklists, taux de valeurs vides). Il ne copie ni n'importe aucune donnée réelle depuis une autre org. C'est la configuration que vous définissez, et non un jeu de données existant, qui détermine le contenu généré.</p>
+
+    <h2>Contrôle d'accès par permission set</h2>
+    <p>L'utilisation de Data Generator est soumise à l'assignation du permission set <strong>« Data Generator User »</strong>. Vous gardez la main, via les outils standards de Salesforce, sur qui peut créer, exécuter et supprimer des générations dans votre org.</p>
+
+    <h2>Suppression des données générées</h2>
+    <p>Chaque génération peut être supprimée en un clic, avec tous les enregistrements qu'elle a créés. Cela permet de ne pas laisser de données de test s'accumuler dans un environnement.</p>
+
+    <h2>Ce que cette page ne couvre pas</h2>
+    <p>Cette page décrit l'architecture technique de Data Generator (absence de callout externe, garde-fou de production, contrôle d'accès). Elle ne constitue pas un avis juridique sur votre conformité RGPD globale, qui dépend aussi de la façon dont vous configurez et utilisez l'application dans votre propre org.</p>
+
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li><a href="/datagenerator/documentation/">Documentation</a> : guides d'installation et de configuration.</li>
+      <li><a href="/datagenerator/faq/">FAQ</a> : toutes les questions fréquentes sur Data Generator.</li>
+      <li><a href="/datagenerator/">Page Data Generator</a> : présentation générale de l'application.</li>
+    </ul>
+
+    <p><a href="/datagenerator/installation.html" class="btn">Installer le package</a></p>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      <a href="/mentions-legales.html">Mentions légales</a>
+      ·
+      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    </p>
+    <p>© Copyright 2026 Dahoni. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('nav');
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('ul a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
