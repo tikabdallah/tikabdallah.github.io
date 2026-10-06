@@ -247,6 +247,8 @@
       padding: 5rem 2rem;
     }
 
+    .dg-features-white { background: #ffffff; }
+
     .dg-features-inner {
       max-width: 1000px;
       margin: 0 auto;
@@ -303,6 +305,78 @@
       color: var(--color-muted);
       margin: 0;
       line-height: 1.6;
+    }
+
+    /* ── Comparison ── */
+    #comparatif .dg-features-inner,
+    #comparison .dg-features-inner { max-width: 1200px; }
+
+    .dg-compare-wrap {
+      overflow-x: auto;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    .dg-compare {
+      width: 100%;
+      min-width: 860px;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .dg-compare th,
+    .dg-compare td {
+      padding: 0.85rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .dg-compare thead th {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      color: var(--navy-dark);
+      background: #ffffff;
+    }
+
+    .dg-compare tbody th {
+      font-weight: 600;
+      color: var(--navy-dark);
+      width: 16%;
+    }
+
+    .dg-compare td { color: var(--color-muted); }
+
+    .dg-compare .dg-compare-us {
+      background: var(--pale);
+      color: var(--navy-dark);
+    }
+
+    .dg-compare thead .dg-compare-us {
+      background: var(--navy-dark);
+      color: var(--pale);
+    }
+
+    .dg-compare .yes,
+    .dg-compare .part,
+    .dg-compare .no {
+      display: inline-block;
+      min-width: 1.1em;
+      font-weight: 800;
+      font-size: 1.05em;
+      text-align: center;
+    }
+
+    .dg-compare .yes { color: #15803d; }
+    .dg-compare .part { color: #c2410c; }
+    .dg-compare .no { color: #dc2626; }
+
+    .dg-compare-note {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      text-align: center;
     }
 
     /* ── Screenshots ── */
@@ -729,8 +803,98 @@
     </div>
   </section>
 
+  <!-- ── Comparison ───────────────────────────────────────────────────────── -->
+  <section class="dg-features" id="comparatif">
+    <div class="dg-features-inner">
+      <h2 class="dg-section-title">Data Generator face aux alternatives</h2>
+      <p class="dg-section-sub">Universal Data Generator, Mockaroo, Snowfakery, scripts Apex maison : chaque approche a ses forces. Voici où se situe Data Generator.</p>
+
+      <div class="dg-compare-wrap">
+        <table class="dg-compare">
+          <thead>
+            <tr>
+              <th scope="col">Critère</th>
+              <th scope="col" class="dg-compare-us">Data Generator</th>
+              <th scope="col">Universal Data Generator</th>
+              <th scope="col">Mockaroo</th>
+              <th scope="col">Snowfakery</th>
+              <th scope="col">Scripts Apex maison</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Fonctionne dans l'org</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Oui">✓</span> App native Salesforce</td>
+              <td><span class="part" aria-label="Partiel">~</span> Application web externe, connexion OAuth à la sandbox</td>
+              <td><span class="no" aria-label="Non">✗</span> Service web externe, import CSV requis</td>
+              <td><span class="no" aria-label="Non">✗</span> Outil Python en ligne de commande</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Code déployé dans l'org</td>
+            </tr>
+            <tr>
+              <th scope="row">Sans code</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Oui">✓</span> Interface Lightning, aucune ligne de code</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Interface web</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Interface web</td>
+              <td><span class="no" aria-label="Non">✗</span> Recettes YAML</td>
+              <td><span class="no" aria-label="Non">✗</span> Développement Apex requis</td>
+            </tr>
+            <tr>
+              <th scope="row">Objets liés en un run</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Oui">✓</span> Via champs de référence</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Relations natives entre objets</td>
+              <td><span class="part" aria-label="Partiel">~</span> Fichiers séparés, IDs à réconcilier</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Relations dans la recette</td>
+              <td><span class="part" aria-label="Partiel">~</span> À coder soi-même</td>
+            </tr>
+            <tr>
+              <th scope="row">Objets de managed packages (CPQ…)</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Oui">✓</span> Tout objet standard ou custom</td>
+              <td><span class="part" aria-label="Partiel">~</span> Non précisé</td>
+              <td><span class="part" aria-label="Partiel">~</span> Via vos propres colonnes CSV</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Oui, selon la recette</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Oui, si vous le codez</td>
+            </tr>
+            <tr>
+              <th scope="row">Suppression d'un run</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Oui">✓</span> En un clic</td>
+              <td><span class="part" aria-label="Partiel">~</span> Non documenté</td>
+              <td><span class="no" aria-label="Non">✗</span> Pas de suivi des enregistrements chargés</td>
+              <td><span class="part" aria-label="Partiel">~</span> Via CumulusCI, à configurer</td>
+              <td><span class="part" aria-label="Partiel">~</span> À coder soi-même</td>
+            </tr>
+            <tr>
+              <th scope="row">Refresh de sandbox</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Oui">✓</span> Automatique (SandboxPostCopyHandler)</td>
+              <td><span class="part" aria-label="Partiel">~</span> Régénération manuelle après le refresh</td>
+              <td><span class="no" aria-label="Non">✗</span> Non</td>
+              <td><span class="part" aria-label="Partiel">~</span> Possible via pipeline CI/CumulusCI</td>
+              <td><span class="part" aria-label="Partiel">~</span> À coder et à maintenir</td>
+            </tr>
+            <tr>
+              <th scope="row">Données hors de l'org</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Oui">✓</span> Aucune</td>
+              <td><span class="part" aria-label="Partiel">~</span> Schéma de l'org traité sur leurs serveurs</td>
+              <td><span class="part" aria-label="Partiel">~</span> Génération hors org, puis import</td>
+              <td><span class="part" aria-label="Partiel">~</span> Génération locale, puis chargement</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Aucune</td>
+            </tr>
+            <tr>
+              <th scope="row">Coût et mise en place</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Oui">✓</span> Gratuit, installation en quelques minutes</td>
+              <td><span class="part" aria-label="Partiel">~</span> Gratuit très limité (50 enregistrements), puis environ 47 à 119 $/mois</td>
+              <td><span class="part" aria-label="Partiel">~</span> Freemium, offres payantes au-delà des limites</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Gratuit (open source), installation et prise en main techniques</td>
+              <td><span class="yes" aria-label="Oui">✓</span> Gratuit, mais temps de dev et de maintenance</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="dg-compare-note">Comparaison indicative basée sur les fonctionnalités publiques de chaque outil. Les offres évoluent : vérifiez auprès de chaque éditeur.</p>
+    </div>
+  </section>
+
   <!-- ── FAQ ──────────────────────────────────────────────────────────────── -->
-  <section class="dg-features" id="faq">
+  <section class="dg-features dg-features-white" id="faq">
     <div class="dg-features-inner">
       <h2 class="dg-section-title">Questions fréquentes</h2>
 

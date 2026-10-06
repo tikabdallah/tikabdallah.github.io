@@ -247,6 +247,8 @@
       padding: 5rem 2rem;
     }
 
+    .dg-features-white { background: #ffffff; }
+
     .dg-features-inner {
       max-width: 1000px;
       margin: 0 auto;
@@ -303,6 +305,78 @@
       color: var(--color-muted);
       margin: 0;
       line-height: 1.6;
+    }
+
+    /* ── Comparison ── */
+    #comparatif .dg-features-inner,
+    #comparison .dg-features-inner { max-width: 1200px; }
+
+    .dg-compare-wrap {
+      overflow-x: auto;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    .dg-compare {
+      width: 100%;
+      min-width: 860px;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .dg-compare th,
+    .dg-compare td {
+      padding: 0.85rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .dg-compare thead th {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      color: var(--navy-dark);
+      background: #ffffff;
+    }
+
+    .dg-compare tbody th {
+      font-weight: 600;
+      color: var(--navy-dark);
+      width: 16%;
+    }
+
+    .dg-compare td { color: var(--color-muted); }
+
+    .dg-compare .dg-compare-us {
+      background: var(--pale);
+      color: var(--navy-dark);
+    }
+
+    .dg-compare thead .dg-compare-us {
+      background: var(--navy-dark);
+      color: var(--pale);
+    }
+
+    .dg-compare .yes,
+    .dg-compare .part,
+    .dg-compare .no {
+      display: inline-block;
+      min-width: 1.1em;
+      font-weight: 800;
+      font-size: 1.05em;
+      text-align: center;
+    }
+
+    .dg-compare .yes { color: #15803d; }
+    .dg-compare .part { color: #c2410c; }
+    .dg-compare .no { color: #dc2626; }
+
+    .dg-compare-note {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      text-align: center;
     }
 
     /* ── Screenshots ── */
@@ -729,8 +803,98 @@
     </div>
   </section>
 
+  <!-- ── Comparison ───────────────────────────────────────────────────────── -->
+  <section class="dg-features" id="comparison">
+    <div class="dg-features-inner">
+      <h2 class="dg-section-title">How Data Generator compares</h2>
+      <p class="dg-section-sub">Universal Data Generator, Mockaroo, Snowfakery, homemade Apex scripts: each approach has its strengths. Here is where Data Generator fits.</p>
+
+      <div class="dg-compare-wrap">
+        <table class="dg-compare">
+          <thead>
+            <tr>
+              <th scope="col">Criteria</th>
+              <th scope="col" class="dg-compare-us">Data Generator</th>
+              <th scope="col">Universal Data Generator</th>
+              <th scope="col">Mockaroo</th>
+              <th scope="col">Snowfakery</th>
+              <th scope="col">Homemade Apex scripts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Runs inside your org</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Yes">✓</span> Native Salesforce app</td>
+              <td><span class="part" aria-label="Partial">~</span> External web app, OAuth connection to the sandbox</td>
+              <td><span class="no" aria-label="No">✗</span> External web service, CSV import required</td>
+              <td><span class="no" aria-label="No">✗</span> Python command-line tool</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Code deployed in the org</td>
+            </tr>
+            <tr>
+              <th scope="row">No code</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Yes">✓</span> Lightning UI, no code at all</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Web UI</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Web UI</td>
+              <td><span class="no" aria-label="No">✗</span> YAML recipes</td>
+              <td><span class="no" aria-label="No">✗</span> Apex development required</td>
+            </tr>
+            <tr>
+              <th scope="row">Related objects in one run</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Yes">✓</span> Via reference fields</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Native relationships between objects</td>
+              <td><span class="part" aria-label="Partial">~</span> Separate files, IDs to reconcile</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Relationships in the recipe</td>
+              <td><span class="part" aria-label="Partial">~</span> You code it yourself</td>
+            </tr>
+            <tr>
+              <th scope="row">Managed package objects (CPQ…)</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Yes">✓</span> Any standard or custom object</td>
+              <td><span class="part" aria-label="Partial">~</span> Not specified</td>
+              <td><span class="part" aria-label="Partial">~</span> Via your own CSV columns</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Yes, depending on the recipe</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Yes, if you code it</td>
+            </tr>
+            <tr>
+              <th scope="row">Deleting a run</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Yes">✓</span> One click</td>
+              <td><span class="part" aria-label="Partial">~</span> Not documented</td>
+              <td><span class="no" aria-label="No">✗</span> No tracking of loaded records</td>
+              <td><span class="part" aria-label="Partial">~</span> Via CumulusCI, needs setup</td>
+              <td><span class="part" aria-label="Partial">~</span> You code it yourself</td>
+            </tr>
+            <tr>
+              <th scope="row">Sandbox refresh</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Yes">✓</span> Automatic (SandboxPostCopyHandler)</td>
+              <td><span class="part" aria-label="Partial">~</span> Manual regeneration after the refresh</td>
+              <td><span class="no" aria-label="No">✗</span> No</td>
+              <td><span class="part" aria-label="Partial">~</span> Possible via CI/CumulusCI pipeline</td>
+              <td><span class="part" aria-label="Partial">~</span> You code and maintain it</td>
+            </tr>
+            <tr>
+              <th scope="row">Data leaving the org</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Yes">✓</span> None</td>
+              <td><span class="part" aria-label="Partial">~</span> Org schema processed on their servers</td>
+              <td><span class="part" aria-label="Partial">~</span> Generated outside the org, then imported</td>
+              <td><span class="part" aria-label="Partial">~</span> Generated locally, then loaded</td>
+              <td><span class="yes" aria-label="Yes">✓</span> None</td>
+            </tr>
+            <tr>
+              <th scope="row">Cost and setup</th>
+              <td class="dg-compare-us"><span class="yes" aria-label="Yes">✓</span> Free, installs in minutes</td>
+              <td><span class="part" aria-label="Partial">~</span> Very limited free tier (50 records), then roughly $47 to $119/month</td>
+              <td><span class="part" aria-label="Partial">~</span> Freemium, paid plans beyond the limits</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Free (open source), technical setup and learning curve</td>
+              <td><span class="yes" aria-label="Yes">✓</span> Free, but dev and maintenance time</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="dg-compare-note">Indicative comparison based on each tool's public features. Offerings change, so check with each vendor.</p>
+    </div>
+  </section>
+
   <!-- ── FAQ ──────────────────────────────────────────────────────────────── -->
-  <section class="dg-features" id="faq">
+  <section class="dg-features dg-features-white" id="faq">
     <div class="dg-features-inner">
       <h2 class="dg-section-title">Frequently asked questions</h2>
 
